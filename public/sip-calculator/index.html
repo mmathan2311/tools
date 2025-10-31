@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="https://ifscpincode.in/image/logo.png" type="image/png">
+  <title>SIP Calculator — Mutual Fund SIP Returns Projection</title>
+  <meta name="description" content="SIP calculator to estimate future value of regular monthly investments. Shows growth chart and totals." />
+  <link rel="stylesheet" href="/assets/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"SIP Calculator","url":"https://tools.ifscpincode.in/sip-calculator","description":"SIP projection calculator for monthly investments."}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/">tools.ifscpincode.in</a>
+      <nav>
+        <a href="/emi-calculator">EMI Calculator</a>
+        <a href="/gst-calculator">GST Calculator</a>
+        <a href="/sip-calculator">SIP Calculator</a>
+        <a href="/bmi-calculator">BMI Calculator</a>
+        <a href="/age-calculator">Age Calculator</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap content-card">
+    <article class="tool-card">
+      <h1>SIP Calculator</h1>
+      <p class="lede">Enter monthly SIP, expected annual return and tenure to see future value and total gain.</p>
+
+      <div class="form-row"><label>Monthly SIP (₹)</label><input id="sip-monthly" type="number" value="5000"></div>
+      <div class="form-row two"><div><label>Expected Annual Return (%)</label><input id="sip-rate" type="number" value="12"></div><div><label>Tenure (Years)</label><input id="sip-years" type="number" value="10"></div></div>
+
+      <div class="actions"><button id="sip-calc" class="btn">Calculate SIP</button> <button id="sip-download" class="btn alt">Download CSV</button></div>
+
+      <div id="sip-result" class="result" style="display:none"></div>
+      <div class="chart-wrap"><canvas id="sip-chart" ></canvas></div>
+      <div id="sip-table-wrap"></div>
+
+      <section class="howto"><h2>About SIP calculations</h2><p>SIP returns assume a steady annualized return compounded monthly. Use conservative figures for planning purposes.</p></section>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="wrap"><small>SIP Calculator • tools.ifscpincode.in</small></div></footer>
+ <script src="/assets/script.js"></script>
+</body>
+</html>

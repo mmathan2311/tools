@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="https://ifscpincode.in/image/logo.png" type="image/png">
+  <title>GST Calculator — CGST SGST IGST Calculator</title>
+  <meta name="description" content="GST calculator: calculate CGST/SGST or IGST for Indian transactions. Reverse-calc total price to base amount." />
+ <link rel="stylesheet" href="/assets/style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"GST Calculator","url":"https://tools.ifscpincode.in/gst-calculator.html","description":"Online GST calculator for India (CGST+SGST and IGST)."}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/">tools.ifscpincode.in</a>
+      <nav>
+         <nav>
+        <a href="/emi-calculator">EMI Calculator</a>
+        <a href="/gst-calculator">GST Calculator</a>
+        <a href="/sip-calculator">SIP Calculator</a>
+        <a href="/bmi-calculator">BMI Calculator</a>
+        <a href="/age-calculator">Age Calculator</a>
+      </nav>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap content-card">
+    <article class="tool-card">
+      <h1>GST Calculator</h1>
+      <p class="lede">Calculate GST amount for a given base price or compute base price from total (inclusive of GST). Supports common GST slabs.</p>
+
+      <div class="form-row"><label>Amount (₹)</label><input id="gst-amount" type="number" value="1000"></div>
+      <div class="form-row two">
+        <div>
+          <label>GST Rate (%)</label>
+          <select id="gst-rate"><option>0</option><option>5</option><option selected>12</option><option>18</option><option>28</option></select>
+        </div>
+        <div>
+          <label>Type</label>
+          <select id="gst-type"><option value="intra">CGST + SGST</option><option value="inter">IGST</option></select>
+        </div>
+      </div>
+
+      <div class="actions"><button id="gst-calc" class="btn">Calculate</button> <button id="gst-reverse" class="btn alt">From Total Price</button></div>
+      <div id="gst-result" class="result" style="display:none"></div>
+
+      <section class="howto"><h2>Usage</h2><p>Use this calculator for quick GST calculations when preparing invoices or quotes. Choose intra-state (CGST+SGST) or inter-state (IGST) as needed.</p></section>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="wrap"><small>GST Calculator • tools.ifscpincode.in</small></div></footer>
+ <script src="/assets/script.js"></script>
+</body>
+</html>

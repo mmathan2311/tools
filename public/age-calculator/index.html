@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="https://ifscpincode.in/image/logo.png" type="image/png">
+  <title>Age Calculator — Years Months Days Between Dates</title>
+  <meta name="description" content="Calculate exact age in years, months and days between two dates. Useful for forms and documentation." />
+  <link rel="stylesheet" href="/assets/style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Age Calculator","url":"https://tools.ifscpincode.in/age-calculator.html","description":"Compute age between two dates."}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/">tools.ifscpincode.in</a>
+       <nav>
+        <a href="/emi-calculator">EMI Calculator</a>
+        <a href="/gst-calculator">GST Calculator</a>
+        <a href="/sip-calculator">SIP Calculator</a>
+        <a href="/bmi-calculator">BMI Calculator</a>
+        <a href="/age-calculator">Age Calculator</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap content-card">
+    <article class="tool-card">
+      <h1>Age Calculator</h1>
+      <p class="lede">Compute years, months and days between date of birth and today (or a custom date).</p>
+      <div class="form-row"><label>Date of Birth</label><input id="dob" type="date" value="1990-01-01"></div>
+      <div class="form-row"><label>Compare To (optional)</label><input id="compare-date" type="date"></div>
+      <div class="actions"><button id="age-calc" class="btn">Calculate Age</button> <button id="age-now" class="btn alt">Use Today</button></div>
+      <div id="age-result" class="result" style="display:none"></div>
+      <section class="howto"><h2>Applications</h2><p>Useful while filling forms, calculating experience, or verifying age eligibility.</p></section>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="wrap"><small>Age Calculator • tools.ifscpincode.in</small></div></footer>
+  <script src="/assets/script.js"></script>
+</body>
+</html>

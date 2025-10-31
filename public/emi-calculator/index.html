@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="https://ifscpincode.in/image/logo.png" type="image/png">
+  <title>EMI Calculator — Free Online Loan EMI Calculator</title>
+  <meta name="description" content="Free EMI calculator: compute monthly EMI, total interest, and view amortization schedule. Download CSV and see interactive chart." />
+  <meta name="keywords" content="emi calculator, loan emi calculator, amortization table, emi chart" />
+  <link rel="canonical" href="https://tools.ifscpincode.in/emi-calculator.html" />
+  <link rel="stylesheet" href="/assets/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "EMI Calculator",
+    "url": "https://tools.ifscpincode.in/emi-calculator.html",
+    "description": "Online EMI calculator with amortization table and downloadable CSV.",
+    "applicationCategory": "FinanceApplication"
+  }
+  </script>
+</head>
+<body>  
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/">tools.ifscpincode.in</a>
+       <nav>
+        <a href="/emi-calculator">EMI Calculator</a>
+        <a href="/gst-calculator">GST Calculator</a>
+        <a href="/sip-calculator">SIP Calculator</a>
+        <a href="/bmi-calculator">BMI Calculator</a>
+        <a href="/age-calculator">Age Calculator</a>
+      </nav>       
+    </div>
+  </header>  
+  <main class="wrap content-card">
+    <article class="tool-card">
+      <h1>EMI Calculator</h1>
+      <p class="lede">Compute monthly EMI for any loan amount, interest rate and tenure. Includes amortization table and a cumulative principal/interest chart.</p>
+
+      <div class="form-row">
+        <label>Loan Amount (₹)</label>
+        <input id="emi-principal" type="number" value="100000" min="0" step="0.01">
+      </div>
+
+      <div class="form-row two">
+        <div>
+          <label>Annual Interest Rate (%)</label>
+          <input id="emi-rate" type="number" value="8.5" step="0.01">
+        </div>
+        <div>
+          <label>Tenure (Years)</label>
+          <input id="emi-years" type="number" value="5" step="1">
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="emi-calc" class="btn">Calculate EMI</button>
+        <button id="emi-download" class="btn alt">Download Amortization CSV</button>
+      </div>
+
+      <div id="emi-result" class="result" style="display:none"></div>
+      <div class="chart-wrap"><canvas id="emi-chart"></canvas></div>
+      <div id="emi-table-wrap"></div>
+
+      <section class="howto">
+        <h2>How to use</h2>
+        <p>Enter your loan amount, annual interest rate and tenure in years. Click <strong>Calculate EMI</strong> to view the monthly payment amount, total interest payable and a full amortization breakdown. Use the CSV button to export the schedule for record keeping.</p>
+      </section>
+
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap"><small>EMI Calculator • tools.ifscpincode.in</small></div>
+  </footer>
+
+  <script src="/assets/script.js"></script>
+</body>
+</html>

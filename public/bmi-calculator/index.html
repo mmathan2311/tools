@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="https://ifscpincode.in/image/logo.png" type="image/png">
+  <title>BMI Calculator — Body Mass Index Tool</title>
+  <meta name="description" content="Simple BMI calculator with category (Underweight, Normal, Overweight, Obesity) based on WHO classifications." />
+  <link rel="stylesheet" href="/assets/style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"BMI Calculator","url":"https://tools.ifscpincode.in/bmi-calculator.html","description":"BMI calculator and category."}
+  </script>
+</head>
+<body>
+ <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/">tools.ifscpincode.in</a>
+       <nav>
+        <a href="/emi-calculator">EMI Calculator</a>
+        <a href="/gst-calculator">GST Calculator</a>
+        <a href="/sip-calculator">SIP Calculator</a>
+        <a href="/bmi-calculator">BMI Calculator</a>
+        <a href="/age-calculator">Age Calculator</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap content-card">
+    <article class="tool-card">
+      <h1>BMI Calculator</h1>
+      <p class="lede">Enter weight (kg) and height (cm) to compute BMI and see category.</p>
+      <div class="form-row"><label>Weight (kg)</label><input id="bmi-weight" type="number" value="70"></div>
+      <div class="form-row"><label>Height (cm)</label><input id="bmi-height" type="number" value="170"></div>
+      <div class="actions"><button id="bmi-calc" class="btn">Calculate BMI</button></div>
+      <div id="bmi-result" class="result" style="display:none"></div>
+      <section class="howto"><h2>About BMI</h2><p>BMI is a simple index of weight-for-height that is often used to classify underweight, overweight and obesity in adults.</p></section>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="wrap"><small>BMI Calculator • tools.ifscpincode.in</small></div></footer>
+   <script src="/assets/script.js"></script>
+</body>
+</html>

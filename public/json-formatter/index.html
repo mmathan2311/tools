@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>JSON Formatter Tool</title>  
+  <meta name="description" content="Calculate percentage, percent increase/decrease, and what percent a number is of another." />
+  <link rel="stylesheet" href="/assets/jsonstyle.css">  
+</head>
+<body>  
+  <div class="app" id="app">    
+    <div class="toolbar" role="toolbar" aria-label="JSON formatter toolbar">
+      <div class="left">
+        <button id="btn-format" class="btn primary" title="Format / Beautify (Ctrl/Cmd + Enter)">Format</button>
+        <button id="btn-minify" class="btn" title="Minify (Ctrl/Cmd + M)">Minify</button>
+        <button id="btn-validate" class="btn" title="Validate JSON">Validate</button>
+        <button id="btn-copy" class="btn" title="Copy Output">Copy Output</button>
+        <button id="btn-download" class="btn" title="Download Output">Download</button>
+        <button id="btn-clear" class="btn" title="Clear (Esc)">Clear</button>
+
+        <input id="file-input" class="file-input" type="file" accept=".json,application/json" />
+        <button id="btn-upload" class="btn" title="Upload JSON file">Upload</button>
+
+        <button id="btn-sample" class="btn" title="Load sample JSON">Sample JSON</button>
+      </div>
+
+      <div class="right">
+        <!-- status area: shows parse/validation messages OR JSON stats -->
+        <div id="status-area" class="muted" aria-live="polite" style="min-width:220px; text-align:right;"></div>
+        <div class="spacer" aria-hidden="true"></div>
+
+        <button id="btn-theme" class="btn icon" title="Toggle light/dark theme (saved)">
+          <svg id="theme-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 3v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M21 12h-2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 21v-2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M3 12h2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Main panes -->
+    <div class="panes">
+      <!-- Left: Input editor -->
+      <section class="pane" id="left-pane" aria-label="Input JSON">
+        <div class="header">
+          <h3>Input</h3>
+          <div class="pane-controls">
+            <span class="subtle">Drag & drop .json file here or paste JSON</span>
+          </div>
+        </div>
+        <textarea id="input-editor" class="editor" placeholder='{ "hello": "world" }' aria-label="JSON input editor"></textarea>
+      </section>
+
+      <!-- Right: Output viewer/editor -->
+      <section class="pane" id="right-pane" aria-label="Formatted JSON output">
+        <div class="header">
+          <h3>Output</h3>
+          <div class="pane-controls">
+            <button id="btn-toggle-edit" class="btn small" title="Toggle edit output">Edit</button>
+            <button id="btn-expand-all" class="btn small" title="Expand all">Expand</button>
+            <button id="btn-collapse-all" class="btn small" title="Collapse all">Collapse</button>
+          </div>
+        </div>
+
+        <div id="output-view" class="viewer" role="region" aria-live="polite" aria-label="Formatted JSON output (viewer)"></div>
+        <textarea id="output-editor" class="editor" style="display:none; margin-top:10px;" aria-label="Editable formatted JSON"></textarea>
+      </section>
+    </div>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite">
+    <strong id="toast-icon" style="width:18px;display:inline-block"></strong>
+    <div id="toast-message"></div>
+  </div>
+  <script src="/assets/jsonscript.js"></script>
+</body>
+</html>

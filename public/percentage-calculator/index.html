@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="https://ifscpincode.in/image/logo.png" type="image/png">
+  <title>Percentage Calculator — Find Percent & Value</title>
+  <meta name="description" content="Calculate percentage, percent increase/decrease, and what percent a number is of another." />
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/">tools.ifscpincode.in</a>
+      <nav>
+        <a href="/emi-calculator">EMI Calculator</a>
+        <a href="/gst-calculator">GST Calculator</a>
+        <a href="/sip-calculator">SIP Calculator</a>
+        <a href="/bmi-calculator">BMI Calculator</a>
+        <a href="/age-calculator">Age Calculator</a>
+        <a href="/percentage-calculator">Percentage Calculator</a>        
+      </nav>
+    </div>
+  </header>
+  <main class="wrap content-card">
+    <article class="tool-card">
+      <h1>Percentage Calculator</h1>
+      <p class="lede">Find percentage of a number, percent increase/decrease, and what percent one number is of another.</p>
+      <div class="form-row">
+        <label>Base Value</label>
+        <input id="percent-base" type="number" value="100">
+      </div>
+      <div class="form-row">
+        <label>Percentage (%)</label>
+        <input id="percent-value" type="number" value="15">
+      </div>
+      <div class="actions">
+        <button id="percent-calc" class="btn">Calculate</button>
+      </div>
+      <div id="percent-result" class="result" style="display:none"></div>
+      <section class="howto">
+        <h2>How to use</h2>
+        <p>Enter values and click <strong>Calculate</strong> to find percent of a value, or what percent one value is of another.</p>
+      </section>
+    </article>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap"><small>Percentage Calculator • tools.ifscpincode.in</small></div>
+  </footer>
+  <script src="/assets/script.js"></script>
+  <script>
+    document.getElementById("percent-calc").onclick = function() {
+      const base = parseFloat(document.getElementById("percent-base").value);
+      const percent = parseFloat(document.getElementById("percent-value").value);
+      if (isNaN(base) || isNaN(percent)) return;
+      const value = base * percent / 100;
+      const whatPercent = base ? (percent / base * 100) : 0;
+      document.getElementById("percent-result").style.display = "block";
+      document.getElementById("percent-result").innerHTML = `
+        <strong>${percent}% of ${base}:</strong> ${value.toFixed(2)}<br>
+        <strong>${percent} is what percent of ${base}:</strong> ${whatPercent.toFixed(2)}%
+      `;
+    };
+  </script>
+</body>
+</html>

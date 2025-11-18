@@ -4,32 +4,21 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <link rel="icon" href="https://ifscpincode.in/image/logo.png" type="image/png">
-  <title>SIP Calculator — Mutual Fund SIP Returns Projection</title>
-  <meta name="description" content="SIP calculator to estimate future value of regular monthly investments. Shows growth chart and totals." />
+  <title>URL Encoder/Decoder — Encode URLs & Special Characters</title>
+  <meta name="description" content="Encode URLs and special characters for web usage. Decode encoded URLs back to plain text." />
+  <meta name="keywords" content="url encoder, url decoder, urlencode, urldecode, percent encoding" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://tools.ifscpincode.in/url-encoder" />
   <link rel="stylesheet" href="/assets/style.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"SIP Calculator","url":"https://tools.ifscpincode.in/sip-calculator","description":"SIP calculator to estimate future value of regular monthly investments. Shows growth chart and totals."}
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"URL Encoder/Decoder","url":"https://tools.ifscpincode.in/url-encoder.html","description":"Encode URLs and special characters for web usage. Decode encoded URLs back to plain text."}
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JKTB30LJVN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-JKTB30LJVN', { 'anonymize_ip': true });
-</script>
-
-  <link rel="canonical" href="https://tools.ifscpincode.in/sip-calculator/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="SIP Calculator — Mutual Fund SIP Returns Projection" />
-  <meta property="og:description" content="SIP calculator to estimate future value of regular monthly investments. Shows growth chart and totals." />
-  <meta property="og:url" content="https://tools.ifscpincode.in/sip-calculator/" />
-  <meta property="og:site_name" content="tools.ifscpincode.in" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="SIP Calculator — Mutual Fund SIP Returns Projection" />
-  <meta name="twitter:description" content="SIP calculator to estimate future value of regular monthly investments. Shows growth chart and totals." />
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebPage","name":"SIP Calculator — Mutual Fund SIP Returns Projection","description":"SIP calculator to estimate future value of regular monthly investments. Shows growth chart and totals.","url":"https://tools.ifscpincode.in/sip-calculator/"}
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JKTB30LJVN', { 'anonymize_ip': true });
   </script>
 
   <meta property="og:image" content="/assets/social_preview.png" />
@@ -105,22 +94,45 @@
   </header>
   <main id="main-content" class="wrap content-card">
     <article class="tool-card">
-      <h1>SIP Calculator</h1>
-      <p class="lede">Enter monthly SIP, expected annual return and tenure to see future value and total gain.</p>
+      <h1>URL Encoder/Decoder</h1>
+      <p class="lede">Encode text and special characters for URLs. Decode percent-encoded URLs back to plain text.</p>
 
-      <div class="form-row"><label>Monthly SIP (₹)</label><input id="sip-monthly" type="number" value="5000"></div>
-      <div class="form-row two"><div><label>Expected Annual Return (%)</label><input id="sip-rate" type="number" value="12"></div><div><label>Tenure (Years)</label><input id="sip-years" type="number" value="10"></div></div>
+      <div class="two-column">
+        <div class="column">
+          <label>Input</label>
+          <textarea id="url-input" class="code-editor" placeholder="Enter text or URL to encode/decode..."></textarea>
+        </div>
+        <div class="column">
+          <label>Output</label>
+          <textarea id="url-output" class="code-editor" readonly></textarea>
+        </div>
+      </div>
 
-      <div class="actions"><button id="sip-calc" class="btn">Calculate SIP</button> <button id="sip-download" class="btn alt">Download CSV</button></div>
+      <div class="actions">
+        <button id="url-encode" class="btn">Encode URL</button>
+        <button id="url-decode" class="btn alt">Decode URL</button>
+        <button id="url-copy" class="btn">Copy Output</button>
+        <button id="url-clear" class="btn alt">Clear</button>
+      </div>
 
-      <div id="sip-result" class="result" style="display:none"></div>
-      <div class="chart-wrap"><canvas id="sip-chart" ></canvas></div>
-      <div id="sip-table-wrap"></div>
+      <div id="url-status" class="small" style="margin-top:8px; color:#44566b;"></div>
 
-      <section class="howto"><h2>About SIP calculations</h2><p>SIP returns assume a steady annualized return compounded monthly. Use conservative figures for planning purposes.</p></section>
+      <section class="howto">
+        <h2>Uses</h2>
+        <ul>
+          <li>Encode special characters (&, ?, =, %, spaces) for query parameters</li>
+          <li>Create safe URLs with percent-encoding (%20 for space, %26 for &)</li>
+          <li>Decode API URLs and query strings</li>
+          <li>Prepare data for URL parameters and form submissions</li>
+        </ul>
+      </section>
     </article>
   </main>
-  <footer class="site-footer"><div class="wrap"><small>SIP Calculator • tools.ifscpincode.in</small></div></footer>
- <script src="/assets/script.js"></script>
+  <footer class="site-footer">
+    <div class="wrap">
+      <small>URL Encoder/Decoder • tools.ifscpincode.in</small>
+    </div>
+  </footer>
+  <script src="/assets/script.js"></script>
 </body>
 </html>

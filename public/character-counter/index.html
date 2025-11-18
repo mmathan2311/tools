@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="https://ifscpincode.in/image/logo.png" type="image/png">
+  <title>Character Counter — Count Characters & Analyze Frequency</title>
+  <meta name="description" content="Count characters with frequency analysis. See which characters appear most in your text with real-time statistics." />
+  <meta name="keywords" content="character counter, character frequency, char count, text analysis, letter frequency" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://tools.ifscpincode.in/character-counter" />
+  <link rel="stylesheet" href="/assets/style.css">
+  <style>
+    .char-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 12px;
+      margin: 20px 0;
+    }
+    .char-stat-card {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
+      color: white;
+      padding: 14px;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .char-stat-card .stat-value {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .char-stat-card .stat-label {
+      font-size: 12px;
+      opacity: 0.9;
+    }
+    .frequency-table {
+      margin-top: 20px;
+      background: #f4f8fb;
+      border: 1px solid #eaf3f8;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .frequency-table table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      font-family: 'Courier New', monospace;
+    }
+    .frequency-table th {
+      background: var(--accent);
+      color: white;
+      padding: 10px;
+      text-align: left;
+      font-weight: 600;
+    }
+    .frequency-table td {
+      padding: 10px;
+      border-bottom: 1px solid #eef3f7;
+    }
+    .frequency-table tr:hover {
+      background: rgba(11, 120, 182, 0.05);
+    }
+    .freq-bar {
+      background: var(--accent);
+      height: 20px;
+      border-radius: 4px;
+      display: inline-block;
+      min-width: 30px;
+      text-align: center;
+      color: white;
+      font-size: 11px;
+      font-weight: 600;
+      line-height: 20px;
+    }
+    .char-display {
+      font-family: 'Courier New', monospace;
+      font-weight: 600;
+      background: #f4f8fb;
+      padding: 4px 8px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+    .tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .tabs button {
+      padding: 10px 16px;
+      border: 2px solid #eef3f7;
+      background: white;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--muted);
+    }
+    .tabs button.active {
+      border-color: var(--accent);
+      background: var(--accent);
+      color: white;
+    }
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Character Counter","url":"https://tools.ifscpincode.in/character-counter.html","description":"Count characters with frequency analysis. See which characters appear most in your text with real-time statistics."}
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JKTB30LJVN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JKTB30LJVN', { 'anonymize_ip': true });
+  </script>
+
+  <meta property="og:image" content="/assets/social_preview.png" />
+  <meta name="twitter:image" content="/assets/social_preview.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+</head>
+<body>
+  <a class="skip-to-content" href="#main-content" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-top">
+      <!-- <a class="brand" href="/">tools.ifscpincode.in</a> -->
+      <!-- <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-sidebar">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button> -->
+    </div>
+    
+    <div class="sidebar-overlay"></div>
+    <nav class="sidebar-menu" id="site-sidebar" role="navigation" aria-label="Primary navigation">
+      <!-- <button class="sidebar-close" aria-label="Close menu">×</button> -->
+      <div class="menu-category">
+        <div class="menu-category-title">
+          <span class="menu-category-icon">💰</span>
+          Finance
+        </div>
+        <a href="/emi-calculator">EMI Calculator</a>
+        <a href="/gst-calculator">GST Calculator</a>
+        <a href="/sip-calculator">SIP Calculator</a>
+        <a href="/percentage-calculator">Percentage Calculator</a>
+      </div>
+      
+      <div class="menu-category">
+        <div class="menu-category-title">
+          <span class="menu-category-icon">💪</span>
+          Health
+        </div>
+        <a href="/bmi-calculator">BMI Calculator</a>
+        <a href="/age-calculator">Age Calculator</a>
+      </div>
+      
+      <div class="menu-category">
+        <div class="menu-category-title">
+          <span class="menu-category-icon">📝</span>
+          Text Tools
+        </div>
+        <a href="/word-counter">Word Counter</a>
+        <a href="/character-counter">Character Counter</a>
+        <a href="/base64-encoder">Base64 Encoder</a>
+        <a href="/url-encoder">URL Encoder</a>
+        <a href="/html-beautifier">HTML Beautifier</a>
+      </div>
+      
+      <div class="menu-category">
+        <div class="menu-category-title">
+          <span class="menu-category-icon">🔧</span>
+          Developer Tools
+        </div>
+        <a href="/json-formatter">JSON Formatter</a>
+        <a href="/xml-formatter">XML Formatter</a>
+        <a href="/uuid-generator">UUID Generator</a>
+      </div>
+      
+      <div class="menu-category">
+        <div class="menu-category-title">
+          <span class="menu-category-icon">⏱️</span>
+          Utilities
+        </div>
+        <a href="/stopwatch-timer">Stopwatch & Timer</a>
+      </div>
+    </nav>
+  </header>
+  <main id="main-content" class="wrap content-card">
+    <article class="tool-card">
+      <h1>Character Counter</h1>
+      <p class="lede">Count characters and analyze their frequency in your text. See which characters appear most often.</p>
+
+      <label>Paste or type your text:</label>
+      <textarea id="char-text" class="code-editor" style="min-height:150px;" placeholder="Start typing to see character statistics..."></textarea>
+
+      <div class="char-stats">
+        <div class="char-stat-card">
+          <div class="stat-value" id="stat-total-chars">0</div>
+          <div class="stat-label">Total Characters</div>
+        </div>
+        <div class="char-stat-card">
+          <div class="stat-value" id="stat-unique-chars">0</div>
+          <div class="stat-label">Unique Characters</div>
+        </div>
+        <div class="char-stat-card">
+          <div class="stat-value" id="stat-letters">0</div>
+          <div class="stat-label">Letters</div>
+        </div>
+        <div class="char-stat-card">
+          <div class="stat-value" id="stat-digits">0</div>
+          <div class="stat-label">Digits</div>
+        </div>
+        <div class="char-stat-card">
+          <div class="stat-value" id="stat-spaces">0</div>
+          <div class="stat-label">Spaces</div>
+        </div>
+        <div class="char-stat-card">
+          <div class="stat-value" id="stat-special">0</div>
+          <div class="stat-label">Special Chars</div>
+        </div>
+      </div>
+
+      <div class="tabs">
+        <button id="tab-frequency" class="active">Frequency</button>
+        <button id="tab-alpha">Letters Only</button>
+        <button id="tab-digits">Digits Only</button>
+      </div>
+
+      <div id="freq-content" class="tab-content active">
+        <div class="frequency-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Character</th>
+                <th>Count</th>
+                <th>Percentage</th>
+                <th>Frequency</th>
+              </tr>
+            </thead>
+            <tbody id="frequency-body">
+              <tr>
+                <td colspan="4" style="text-align:center; color:#44566b;">Paste text to see frequency</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="alpha-content" class="tab-content">
+        <div class="frequency-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Letter</th>
+                <th>Count</th>
+                <th>Percentage</th>
+                <th>Frequency</th>
+              </tr>
+            </thead>
+            <tbody id="alpha-body">
+              <tr>
+                <td colspan="4" style="text-align:center; color:#44566b;">No letters found</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="digits-content" class="tab-content">
+        <div class="frequency-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Digit</th>
+                <th>Count</th>
+                <th>Percentage</th>
+                <th>Frequency</th>
+              </tr>
+            </thead>
+            <tbody id="digits-body">
+              <tr>
+                <td colspan="4" style="text-align:center; color:#44566b;">No digits found</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="actions" style="margin-top: 20px;">
+        <button id="cc-copy-stats" class="btn">Copy Statistics</button>
+        <button id="cc-clear" class="btn alt">Clear</button>
+      </div>
+
+      <section class="howto">
+        <h2>Use Cases</h2>
+        <ul>
+          <li>Cryptography & cipher analysis</li>
+          <li>Linguistic and text analysis</li>
+          <li>SEO optimization (keyword frequency)</li>
+          <li>Password strength checking</li>
+          <li>Data validation and pattern matching</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <small>Character Counter • tools.ifscpincode.in</small>
+    </div>
+  </footer>
+  <script src="/assets/script.js"></script>
+</body>
+</html>

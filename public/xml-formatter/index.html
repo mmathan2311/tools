@@ -4,32 +4,21 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <link rel="icon" href="https://ifscpincode.in/image/logo.png" type="image/png">
-  <title>SIP Calculator — Mutual Fund SIP Returns Projection</title>
-  <meta name="description" content="SIP calculator to estimate future value of regular monthly investments. Shows growth chart and totals." />
+  <title>XML Formatter — Format & Validate XML Code</title>
+  <meta name="description" content="Format XML with proper indentation and validate XML syntax. Minify XML to reduce file size." />
+  <meta name="keywords" content="xml formatter, xml beautifier, xml validator, format xml code, minify xml" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://tools.ifscpincode.in/xml-formatter" />
   <link rel="stylesheet" href="/assets/style.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"SIP Calculator","url":"https://tools.ifscpincode.in/sip-calculator","description":"SIP calculator to estimate future value of regular monthly investments. Shows growth chart and totals."}
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"XML Formatter","url":"https://tools.ifscpincode.in/xml-formatter.html","description":"Format XML with proper indentation and validate XML syntax. Minify XML to reduce file size."}
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JKTB30LJVN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-JKTB30LJVN', { 'anonymize_ip': true });
-</script>
-
-  <link rel="canonical" href="https://tools.ifscpincode.in/sip-calculator/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="SIP Calculator — Mutual Fund SIP Returns Projection" />
-  <meta property="og:description" content="SIP calculator to estimate future value of regular monthly investments. Shows growth chart and totals." />
-  <meta property="og:url" content="https://tools.ifscpincode.in/sip-calculator/" />
-  <meta property="og:site_name" content="tools.ifscpincode.in" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="SIP Calculator — Mutual Fund SIP Returns Projection" />
-  <meta name="twitter:description" content="SIP calculator to estimate future value of regular monthly investments. Shows growth chart and totals." />
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebPage","name":"SIP Calculator — Mutual Fund SIP Returns Projection","description":"SIP calculator to estimate future value of regular monthly investments. Shows growth chart and totals.","url":"https://tools.ifscpincode.in/sip-calculator/"}
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JKTB30LJVN', { 'anonymize_ip': true });
   </script>
 
   <meta property="og:image" content="/assets/social_preview.png" />
@@ -41,7 +30,7 @@
   <a class="skip-to-content" href="#main-content" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
   <header class="site-header">
     <div class="header-top">
-      <!-- <a class="brand" href="/">tools.ifscpincode.in</a> -->
+      <a class="brand" href="/">tools.ifscpincode.in</a>
       <!-- <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-sidebar">
         <span></span>
         <span></span>
@@ -105,22 +94,47 @@
   </header>
   <main id="main-content" class="wrap content-card">
     <article class="tool-card">
-      <h1>SIP Calculator</h1>
-      <p class="lede">Enter monthly SIP, expected annual return and tenure to see future value and total gain.</p>
+      <h1>XML Formatter</h1>
+      <p class="lede">Format XML with proper indentation, validate syntax, and minify for smaller file sizes.</p>
+      
+      <div class="two-column">
+        <div class="column">
+          <label>XML Input</label>
+          <textarea id="xml-input" class="code-editor" placeholder="Paste your XML code here..."></textarea>
+        </div>
+        <div class="column">
+          <label>Formatted Output</label>
+          <textarea id="xml-output" class="code-editor" readonly></textarea>
+        </div>
+      </div>
 
-      <div class="form-row"><label>Monthly SIP (₹)</label><input id="sip-monthly" type="number" value="5000"></div>
-      <div class="form-row two"><div><label>Expected Annual Return (%)</label><input id="sip-rate" type="number" value="12"></div><div><label>Tenure (Years)</label><input id="sip-years" type="number" value="10"></div></div>
+      <div class="actions">
+        <button id="xml-format" class="btn">Format XML</button>
+        <button id="xml-minify" class="btn alt">Minify XML</button>
+        <button id="xml-validate" class="btn">Validate</button>
+        <button id="xml-copy" class="btn">Copy Output</button>
+        <button id="xml-clear" class="btn alt">Clear</button>
+      </div>
 
-      <div class="actions"><button id="sip-calc" class="btn">Calculate SIP</button> <button id="sip-download" class="btn alt">Download CSV</button></div>
+      <div id="xml-status" class="small" style="margin-top:8px; color:#44566b;"></div>
 
-      <div id="sip-result" class="result" style="display:none"></div>
-      <div class="chart-wrap"><canvas id="sip-chart" ></canvas></div>
-      <div id="sip-table-wrap"></div>
-
-      <section class="howto"><h2>About SIP calculations</h2><p>SIP returns assume a steady annualized return compounded monthly. Use conservative figures for planning purposes.</p></section>
+      <section class="howto">
+        <h2>Features</h2>
+        <ul>
+          <li>Automatic indentation for nested XML elements</li>
+          <li>XML syntax validation with error reporting</li>
+          <li>Minify XML to reduce file size</li>
+          <li>Copy formatted output to clipboard</li>
+          <li>Line count and character statistics</li>
+        </ul>
+      </section>
     </article>
   </main>
-  <footer class="site-footer"><div class="wrap"><small>SIP Calculator • tools.ifscpincode.in</small></div></footer>
- <script src="/assets/script.js"></script>
+  <footer class="site-footer">
+    <div class="wrap">
+      <small>XML Formatter • tools.ifscpincode.in</small>
+    </div>
+  </footer>
+  <script src="/assets/script.js"></script>
 </body>
 </html>

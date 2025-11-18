@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="https://ifscpincode.in/image/logo.png" type="image/png">
+  <title>Word Counter — Count Words, Characters & Lines</title>
+  <meta name="description" content="Free word counter tool. Get real-time word count, character count, sentence count, reading time and more." />
+  <meta name="keywords" content="word counter, word count, character count, text statistics, reading time" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://tools.ifscpincode.in/word-counter" />
+  <link rel="stylesheet" href="/assets/style.css">
+  <style>
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+      margin: 20px 0;
+    }
+    .stat-card {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
+      color: white;
+      padding: 16px;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .stat-card .stat-value {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .stat-card .stat-label {
+      font-size: 12px;
+      opacity: 0.9;
+    }
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Word Counter","url":"https://tools.ifscpincode.in/word-counter.html","description":"Free word counter tool. Get real-time word count, character count, sentence count, reading time and more."}
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JKTB30LJVN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JKTB30LJVN', { 'anonymize_ip': true });
+  </script>
+
+  <meta property="og:image" content="/assets/social_preview.png" />
+  <meta name="twitter:image" content="/assets/social_preview.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+</head>
+<body>
+  <a class="skip-to-content" href="#main-content" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-top">
+      <!-- <a class="brand" href="/">tools.ifscpincode.in</a> -->
+      <!-- <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-sidebar">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button> -->
+    </div>
+    
+    <div class="sidebar-overlay"></div>
+    <nav class="sidebar-menu" id="site-sidebar" role="navigation" aria-label="Primary navigation">
+      <!-- <button class="sidebar-close" aria-label="Close menu">×</button> -->
+      <div class="menu-category">
+        <div class="menu-category-title">
+          <span class="menu-category-icon">💰</span>
+          Finance
+        </div>
+        <a href="/emi-calculator">EMI Calculator</a>
+        <a href="/gst-calculator">GST Calculator</a>
+        <a href="/sip-calculator">SIP Calculator</a>
+        <a href="/percentage-calculator">Percentage Calculator</a>
+      </div>
+      
+      <div class="menu-category">
+        <div class="menu-category-title">
+          <span class="menu-category-icon">💪</span>
+          Health
+        </div>
+        <a href="/bmi-calculator">BMI Calculator</a>
+        <a href="/age-calculator">Age Calculator</a>
+      </div>
+      
+      <div class="menu-category">
+        <div class="menu-category-title">
+          <span class="menu-category-icon">📝</span>
+          Text Tools
+        </div>
+        <a href="/word-counter">Word Counter</a>
+        <a href="/character-counter">Character Counter</a>
+        <a href="/base64-encoder">Base64 Encoder</a>
+        <a href="/url-encoder">URL Encoder</a>
+        <a href="/html-beautifier">HTML Beautifier</a>
+      </div>
+      
+      <div class="menu-category">
+        <div class="menu-category-title">
+          <span class="menu-category-icon">🔧</span>
+          Developer Tools
+        </div>
+        <a href="/json-formatter">JSON Formatter</a>
+        <a href="/xml-formatter">XML Formatter</a>
+        <a href="/uuid-generator">UUID Generator</a>
+      </div>
+      
+      <div class="menu-category">
+        <div class="menu-category-title">
+          <span class="menu-category-icon">⏱️</span>
+          Utilities
+        </div>
+        <a href="/stopwatch-timer">Stopwatch & Timer</a>
+      </div>
+    </nav>
+  </header>
+  <main id="main-content" class="wrap content-card">
+    <article class="tool-card">
+      <h1>Word Counter</h1>
+      <p class="lede">Get real-time statistics for your text. Count words, characters, sentences, and more.</p>
+
+      <label>Paste or type your text here:</label>
+      <textarea id="word-text" class="code-editor" style="min-height:200px;" placeholder="Start typing or paste text to see live statistics..."></textarea>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-value" id="stat-words">0</div>
+          <div class="stat-label">Words</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="stat-chars">0</div>
+          <div class="stat-label">Characters</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="stat-chars-no-space">0</div>
+          <div class="stat-label">Chars (no space)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="stat-sentences">0</div>
+          <div class="stat-label">Sentences</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="stat-paragraphs">0</div>
+          <div class="stat-label">Paragraphs</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="stat-lines">0</div>
+          <div class="stat-label">Lines</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="stat-reading-time">0 min</div>
+          <div class="stat-label">Reading Time</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="stat-avg-word-length">0</div>
+          <div class="stat-label">Avg Word Length</div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="wc-copy-stats" class="btn">Copy Statistics</button>
+        <button id="wc-clear" class="btn alt">Clear</button>
+      </div>
+
+      <section class="howto">
+        <h2>Use Cases</h2>
+        <ul>
+          <li>Essay writing - verify word count requirements</li>
+          <li>Content creation - track article length and reading time</li>
+          <li>Tweets/social media - ensure character limits</li>
+          <li>Academic papers - meet assignment specifications</li>
+          <li>Blog posts - optimize content for SEO</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <small>Word Counter • tools.ifscpincode.in</small>
+    </div>
+  </footer>
+  <script src="/assets/script.js"></script>
+</body>
+</html>

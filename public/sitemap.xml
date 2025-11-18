@@ -1,11 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://tools.ifscpincode.in/</loc></url>
-  <url><loc>https://tools.ifscpincode.in/emi-calculator</loc></url>
-  <url><loc>https://tools.ifscpincode.in/gst-calculator</loc></url>
-  <url><loc>https://tools.ifscpincode.in/sip-calculator</loc></url>
-  <url><loc>https://tools.ifscpincode.in/bmi-calculator</loc></url>
-  <url><loc>https://tools.ifscpincode.in/age-calculator</loc></url>
-  <url><loc>https://tools.ifscpincode.in/percentage-calculator</loc></url>
-  <url><loc>https://tools.ifscpincode.in/json-formatter</loc></url>
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://tools.ifscpincode.in/</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- High priority tools (0.8) -->
+  <url>
+    <loc>https://tools.ifscpincode.in/emi-calculator</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://tools.ifscpincode.in/gst-calculator</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://tools.ifscpincode.in/sip-calculator</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://tools.ifscpincode.in/bmi-calculator</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://tools.ifscpincode.in/age-calculator</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://tools.ifscpincode.in/percentage-calculator</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://tools.ifscpincode.in/json-formatter</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://tools.ifscpincode.in/xml-formatter</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://tools.ifscpincode.in/base64-encoder</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://tools.ifscpincode.in/url-encoder</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://tools.ifscpincode.in/html-beautifier</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Normal priority (0.6) -->
+  <url>
+    <loc>https://tools.ifscpincode.in/uuid-generator</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://tools.ifscpincode.in/stopwatch-timer</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://tools.ifscpincode.in/word-counter</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://tools.ifscpincode.in/character-counter</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
 </urlset>

@@ -11,7 +11,7 @@
   <link rel="canonical" href="https://tools.ifscpincode.in/url-encoder" />
   <link rel="stylesheet" href="/assets/style.css">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"URL Encoder/Decoder","url":"https://tools.ifscpincode.in/url-encoder.html","description":"Encode URLs and special characters for web usage. Decode encoded URLs back to plain text."}
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"URL Encoder/Decoder","url": "https://tools.ifscpincode.in/url-encoder","description":"Encode URLs and special characters for web usage. Decode encoded URLs back to plain text."}
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JKTB30LJVN"></script>
   <script>
@@ -25,6 +25,9 @@
   <meta name="twitter:image" content="/assets/social_preview.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between URL encoding and Base64 encoding?","acceptedAnswer":{"@type":"Answer","text":"URL encoding converts characters to percent-encoded format (%XX) for safe use in URLs. Base64 encoding converts binary data to a text string for transmission in text-based systems. They serve different purposes — URL encoding is for URLs and query parameters, while Base64 is for encoding binary data in text fields."}},{"@type":"Question","name":"Should I encode the entire URL or just the parameter values?","acceptedAnswer":{"@type":"Answer","text":"Only encode the parameter values, not the entire URL. Encoding the full URL would also encode the :// in https:// and the / between path segments, breaking the URL. Use this tool to encode specific values before adding them as query parameters."}},{"@type":"Question","name":"What characters do not need to be URL encoded?","acceptedAnswer":{"@type":"Answer","text":"Letters (A–Z, a–z), digits (0–9), and the characters hyphen (-), underscore (_), period (.), and tilde (~) are considered safe and do not need encoding in URLs. All other characters should be percent-encoded."}}]}
+  </script>
 </head>
 <body>
   <a class="skip-to-content" href="#main-content" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
@@ -126,6 +129,34 @@
           <li>Prepare data for URL parameters and form submissions</li>
         </ul>
       </section>
+    
+      <section class="seo-content">
+        <h2>What is URL Encoding?</h2>
+        <p>URL encoding (also known as percent-encoding) converts special characters in a URL into a format that can be safely transmitted over the internet. URLs can only be sent using the ASCII character set, so characters outside this set — like spaces, Hindi text, symbols, or emojis — must be encoded. For example, a space becomes %20, and @ becomes %40.</p>
+
+        <h2>Why URL Encoding is Necessary</h2>
+        <p>URLs have reserved characters like ?, &, =, #, and / that have special meaning in the URL structure. If these appear in query parameter values, they must be encoded to avoid breaking the URL. Similarly, non-ASCII characters (like Indian language text) must be UTF-8 encoded and then percent-encoded to work in all browsers and servers.</p>
+
+        <h2>Common URL Encoding Use Cases</h2>
+        <p>Web developers and API testers use URL encoding when: building query strings for GET requests, encoding search terms in URLs, passing special characters in form data, constructing redirect URLs, working with OAuth tokens and API keys in request parameters, and debugging malformed URLs from server logs.</p>
+
+        <section class="faq">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <h3>What is the difference between URL encoding and Base64 encoding?</h3>
+            <p>URL encoding converts characters to percent-encoded format (%XX) for safe use in URLs. Base64 encoding converts binary data to a text string for transmission in text-based systems. They serve different purposes — URL encoding is for URLs and query parameters, while Base64 is for encoding binary data in text fields.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Should I encode the entire URL or just the parameter values?</h3>
+            <p>Only encode the parameter values, not the entire URL. Encoding the full URL would also encode the :// in https:// and the / between path segments, breaking the URL. Use this tool to encode specific values before adding them as query parameters.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What characters do not need to be URL encoded?</h3>
+            <p>Letters (A–Z, a–z), digits (0–9), and the characters hyphen (-), underscore (_), period (.), and tilde (~) are considered safe and do not need encoding in URLs. All other characters should be percent-encoded.</p>
+          </div>
+        </section>
+      </section>
+
     </article>
   </main>
   <footer class="site-footer">

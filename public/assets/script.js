@@ -417,88 +417,110 @@
   }
 })();
 
-// Hamburger Menu
-// Hamburger Menu
-(function(){
-  function $q(sel){ return document.querySelector(sel); }
-  function $qa(sel){ return document.querySelectorAll(sel); }
-  
-  const menuToggle = $q('.menu-toggle');
-  const sidebar = $q('.sidebar-menu');
-  const overlay = $q('.sidebar-overlay');
-  const menuLinks = $qa('.sidebar-menu a');
-  
-  if(!menuToggle || !sidebar || !overlay) return;
-  
-  // Toggle menu on mobile only
- menuToggle.addEventListener('click',()=>{
-    if(sidebar.classList.contains('active')){
-        closeSidebar();
-    } else {
-        openSidebar();
-    }
-});
-  
-  // Close menu on link click (mobile only)
-  menuLinks.forEach(link=>{
-    link.addEventListener('click',()=>{
-      if(window.innerWidth <= 768){
-        menuToggle.classList.remove('active');
-        sidebar.classList.remove('active');
-        overlay.classList.remove('active');
-      }
-    });
-  });
-  
-  // Close menu on overlay click
-  overlay.addEventListener('click',()=>{
-    menuToggle.classList.remove('active');
-    sidebar.classList.remove('active');
-    overlay.classList.remove('active');
-  });
-  
-  // Close menu on Escape key
-  document.addEventListener('keydown',(e)=>{
-    if(e.key==='Escape' && sidebar.classList.contains('active')){
-      menuToggle.classList.remove('active');
-      sidebar.classList.remove('active');
-      overlay.classList.remove('active');
-    }
-  });
-})();
-
-// Sidebar close button & ESC support
-document.addEventListener('DOMContentLoaded', function(){
-  const sidebarClose = document.querySelector('.sidebar-close');
+// Single, self-contained sidebar controller
+document.addEventListener('DOMContentLoaded', function () {
   const menuToggle = document.querySelector('.menu-toggle');
   const sidebar = document.querySelector('.sidebar-menu');
   const overlay = document.querySelector('.sidebar-overlay');
-  function closeSidebar(){
-    if(menuToggle) menuToggle.classList.remove('active');
-    if(sidebar) sidebar.classList.remove('active');
-    if(overlay) overlay.classList.remove('active');
+  const header = document.querySelector('.header-top');
+  const menuLinks = document.querySelectorAll('.sidebar-menu a');
+
+  // safe no-op if elements missing
+  if (!sidebar || !overlay) return;
+
+  function isMobile() {
+    return window.innerWidth <= 900;
+  }
+
+  function openSidebar() {
+    sidebar.classList.add('active');
+    overlay.classList.add('active');
+    // mark body only for desktop layout shift case (we'll use observer too)
+    if (!isMobile()) document.body.classList.add('sidebar-open');
+    if (menuToggle) menuToggle.classList.add('active');
+    if (menuToggle) menuToggle.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeSidebar() {
+    sidebar.classList.remove('active');
+    overlay.classList.remove('active');
     document.body.classList.remove('sidebar-open');
+    if (menuToggle) menuToggle.classList.remove('active');
+    if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
   }
-  if(sidebarClose){
-    sidebarClose.addEventListener('click', closeSidebar);
+
+  // Toggle from hamburger button
+  if (menuToggle) {
+    menuToggle.addEventListener('click', function (e) {
+      e.stopPropagation(); // prevent header click from propagating
+      if (sidebar.classList.contains('active')) closeSidebar();
+      else openSidebar();
+    });
   }
-  // close on ESC
-  document.addEventListener('keydown', function(e){
-    if(e.key === 'Escape') closeSidebar();
+
+  // Overlay click closes sidebar (mobile)
+  overlay.addEventListener('click', closeSidebar);
+
+  // Close on ESC
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeSidebar();
   });
-  // when sidebar becomes active on desktop, add body class for layout shift
-  const observer = new MutationObserver(function(muts){
-    muts.forEach(m=>{
-      if(m.target.classList && m.target.classList.contains('sidebar-menu')){
-        if(m.target.classList.contains('active')){
-          document.body.classList.add('sidebar-open');
+
+  // Header click will close sidebar only if mobile and sidebar is open
+  if (header) {
+    header.addEventListener('click', function () {
+      if (isMobile() && sidebar.classList.contains('active')) closeSidebar();
+    });
+  }
+
+  // Close when clicking any link on mobile
+  menuLinks.forEach(link => {
+    link.addEventListener('click', function () {
+      if (isMobile()) closeSidebar();
+    });
+  });
+
+  // Observer: only set sidebar-open class on body for desktop active state
+  const obs = new MutationObserver(function (mutations) {
+    mutations.forEach(m => {
+      if (m.target && m.target.classList) {
+        const active = m.target.classList.contains('active');
+        if (active) {
+          if (!isMobile()) document.body.classList.add('sidebar-open');
         } else {
           document.body.classList.remove('sidebar-open');
         }
       }
     });
   });
-  const sb = document.querySelector('.sidebar-menu');
-  if(sb) observer.observe(sb, {attributes:true,attributeFilter:['class']});
-});
 
+  obs.observe(sidebar, { attributes: true, attributeFilter: ['class'] });
+
+  // Make sure correct initial state on load/resize
+  function syncInitialState() {
+    if (isMobile()) {
+      // hide sidebar by default on mobile
+      sidebar.classList.remove('active');
+      overlay.classList.remove('active');
+      document.body.classList.remove('sidebar-open');
+      if (menuToggle) menuToggle.style.display = 'flex';
+    } else {
+      // desktop: show sidebar by default (user requested)
+      sidebar.classList.add('active');
+      overlay.classList.remove('active');
+      document.body.classList.add('sidebar-open');
+      if (menuToggle) menuToggle.style.display = 'none';
+    }
+    if (menuToggle) menuToggle.setAttribute('aria-expanded', sidebar.classList.contains('active') ? 'true' : 'false');
+  }
+
+  // run on load
+  syncInitialState();
+
+  // keep behavior correct on resize
+  let resizeTimer = null;
+  window.addEventListener('resize', function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(syncInitialState, 120);
+  });
+});

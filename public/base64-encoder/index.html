@@ -11,7 +11,7 @@
   <link rel="canonical" href="https://tools.ifscpincode.in/base64-encoder" />
   <link rel="stylesheet" href="/assets/style.css">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Base64 Encoder/Decoder","url":"https://tools.ifscpincode.in/base64-encoder.html","description":"Encode text to Base64 and decode Base64 strings. Fast, simple, and secure base64 converter."}
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Base64 Encoder/Decoder","url": "https://tools.ifscpincode.in/base64-encoder","description":"Encode text to Base64 and decode Base64 strings. Fast, simple, and secure base64 converter."}
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JKTB30LJVN"></script>
   <script>
@@ -25,6 +25,9 @@
   <meta name="twitter:image" content="/assets/social_preview.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is Base64 a form of encryption?","acceptedAnswer":{"@type":"Answer","text":"No. Base64 is an encoding scheme, not encryption. Anyone can decode Base64 data instantly — it provides no security. It is only used to represent binary data in text form, not to protect it. For security, use proper encryption algorithms like AES."}},{"@type":"Question","name":"Is my data safe when using this Base64 tool?","acceptedAnswer":{"@type":"Answer","text":"Yes. All encoding and decoding happens in your browser using JavaScript. No data is sent to any server. Your text or credentials remain completely private."}},{"@type":"Question","name":"Why does Base64 end with == sometimes?","acceptedAnswer":{"@type":"Answer","text":"The \"=\" characters are padding added to make the encoded output length a multiple of 4. If the input length is divisible by 3, no padding is needed. If the remainder is 1 byte, \"==\" is added. If 2 bytes, \"=\" is added."}}]}
+  </script>
 </head>
 <body>
   <a class="skip-to-content" href="#main-content" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
@@ -126,6 +129,34 @@
           <li>Data transmission and email encoding</li>
         </ul>
       </section>
+    
+      <section class="seo-content">
+        <h2>What is Base64 Encoding?</h2>
+        <p>Base64 is a binary-to-text encoding scheme that converts binary data (or any text) into a set of 64 printable ASCII characters. It is widely used to safely transmit data over media designed to handle only text — such as email attachments (MIME), embedding images in HTML/CSS as data URIs, storing binary data in JSON or XML, and encoding credentials in HTTP Basic Authentication headers.</p>
+
+        <h2>How Base64 Encoding Works</h2>
+        <p>Base64 takes 3 bytes (24 bits) of binary data at a time and encodes them as 4 characters from a 64-character alphabet (A–Z, a–z, 0–9, +, /). This means Base64-encoded data is approximately 33% larger than the original. The "=" padding character is added at the end if the input is not a multiple of 3 bytes.</p>
+
+        <h2>Common Uses of Base64</h2>
+        <p>Developers use Base64 daily for: encoding API keys and secrets, embedding small images directly in HTML or CSS (as data URIs), encoding request payloads in REST and GraphQL APIs, storing binary data in databases that only support text fields, and working with JWT (JSON Web Token) authentication headers.</p>
+
+        <section class="faq">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <h3>Is Base64 a form of encryption?</h3>
+            <p>No. Base64 is an encoding scheme, not encryption. Anyone can decode Base64 data instantly — it provides no security. It is only used to represent binary data in text form, not to protect it. For security, use proper encryption algorithms like AES.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Is my data safe when using this Base64 tool?</h3>
+            <p>Yes. All encoding and decoding happens in your browser using JavaScript. No data is sent to any server. Your text or credentials remain completely private.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Why does Base64 end with == sometimes?</h3>
+            <p>The "=" characters are padding added to make the encoded output length a multiple of 4. If the input length is divisible by 3, no padding is needed. If the remainder is 1 byte, "==" is added. If 2 bytes, "=" is added.</p>
+          </div>
+        </section>
+      </section>
+
     </article>
   </main>
   <footer class="site-footer">

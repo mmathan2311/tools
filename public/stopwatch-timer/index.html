@@ -17,7 +17,7 @@
       font-weight: 700;
       text-align: center;
       padding: 30px;
-      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
       color: white;
       border-radius: 10px;
       margin: 20px 0;
@@ -31,8 +31,8 @@
     .timer-tabs button {
       flex: 1;
       padding: 12px;
-      border: 2px solid #eef3f7;
-      background: #fff;
+      border: 2px solid var(--border);
+      background: var(--surface);
       border-radius: 8px;
       cursor: pointer;
       font-weight: 600;
@@ -78,73 +78,11 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does this timer work when I switch tabs?","acceptedAnswer":{"@type":"Answer","text":"Yes. The timer continues running in the background even when you switch to another browser tab. However, some browsers may throttle background JavaScript after a period of inactivity. For critical timing, keep this tab active or use your phone's native timer app."}},{"@type":"Question","name":"What is the Pomodoro Technique?","acceptedAnswer":{"@type":"Answer","text":"The Pomodoro Technique is a time management method where you work for 25 minutes, then take a 5-minute break. After four such \"pomodoros,\" you take a longer break of 15–30 minutes. Use the countdown timer to implement this technique — set 25 minutes for work and 5 minutes for breaks."}},{"@type":"Question","name":"Can I use this stopwatch for sports timing?","acceptedAnswer":{"@type":"Answer","text":"Yes. The stopwatch measures time to millisecond precision and supports lap recording, making it suitable for timing running sprints, swimming lengths, or cycling segments. For official competitive sports events, a certified stopwatch or timing system should be used."}}]}
   </script>
+  <script>(function(){try{var t=localStorage.getItem('theme')||((window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches)?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 </head>
 <body>
   <a class="skip-to-content" href="#main-content" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
-  <header class="site-header">
-    <div class="header-top">
-      <!-- <a class="brand" href="/">tools.ifscpincode.in</a> -->
-      <!-- <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-sidebar">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button> -->
-    </div>
-    
-    <div class="sidebar-overlay"></div>
-    <nav class="sidebar-menu" id="site-sidebar" role="navigation" aria-label="Primary navigation">
-      <!-- <button class="sidebar-close" aria-label="Close menu">×</button> -->
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">💰</span>
-          Finance
-        </div>
-        <a href="/emi-calculator">EMI Calculator</a>
-        <a href="/gst-calculator">GST Calculator</a>
-        <a href="/sip-calculator">SIP Calculator</a>
-        <a href="/percentage-calculator">Percentage Calculator</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">💪</span>
-          Health
-        </div>
-        <a href="/bmi-calculator">BMI Calculator</a>
-        <a href="/age-calculator">Age Calculator</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">📝</span>
-          Text Tools
-        </div>
-        <a href="/word-counter">Word Counter</a>
-        <a href="/character-counter">Character Counter</a>
-        <a href="/base64-encoder">Base64 Encoder</a>
-        <a href="/url-encoder">URL Encoder</a>
-        <a href="/html-beautifier">HTML Beautifier</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">🔧</span>
-          Developer Tools
-        </div>
-        <a href="/json-formatter">JSON Formatter</a>
-        <a href="/xml-formatter">XML Formatter</a>
-        <a href="/uuid-generator">UUID Generator</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">⏱️</span>
-          Utilities
-        </div>
-        <a href="/stopwatch-timer">Stopwatch & Timer</a>
-      </div>
-    </nav>
-  </header>
+  
   <main id="main-content" class="wrap content-card">
     <article class="tool-card">
       <h1>Stopwatch & Timer</h1>
@@ -196,14 +134,11 @@
       </section>
     
       <section class="seo-content">
-        <h2>Free Online Stopwatch and Countdown Timer</h2>
-        <p>This free browser-based stopwatch and countdown timer works on any device — desktop, mobile, or tablet — without any app installation or sign-up. Use the stopwatch to measure elapsed time with lap recording, or use the countdown timer to set a precise duration and get alerted when time is up.</p>
+        <h2>A stopwatch and timer that just work</h2>
+        <p>No app to install, no permissions to grant — open the page and start timing. The stopwatch counts up for whenever you need to measure how long something takes; the countdown timer counts down to zero and alerts you when time's up. Switch between the two with a tap.</p>
+        <h2>Handy for everyday timing</h2>
+        <p>It's the quiet workhorse of a productivity routine: timing focused work sprints, keeping presentations to length, managing rest between gym sets, steeping tea, or running a quick experiment. Because it lives in a browser tab, it's always a click away on whatever device you're already using.</p>
 
-        <h2>Uses of an Online Stopwatch</h2>
-        <p>Online stopwatches are used in many everyday situations: timing workouts and rest periods at the gym, measuring cooking and baking times in the kitchen, recording lap times for running or cycling training, timing presentations and speeches, managing study sessions with the Pomodoro technique, and clocking reaction times for experiments or games.</p>
-
-        <h2>Countdown Timer Features</h2>
-        <p>The countdown timer lets you set hours, minutes, and seconds for any duration. It counts down in real time and alerts you when the time expires. Use it for cooking (boiling eggs, baking bread), short meditation sessions, classroom activities, timed quizzes, or managing intervals during interval training workouts.</p>
 
         <section class="faq">
           <h2>Frequently Asked Questions</h2>
@@ -224,11 +159,8 @@
 
     </article>
   </main>
-  <footer class="site-footer">
-    <div class="wrap">
-      <small>Stopwatch & Timer • tools.ifscpincode.in</small>
-    </div>
-  </footer>
+  
   <script src="/assets/script.js"></script>
+  <script src="/assets/components.js" defer></script>
 </body>
 </html>

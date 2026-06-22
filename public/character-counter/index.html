@@ -18,7 +18,7 @@
       margin: 20px 0;
     }
     .char-stat-card {
-      background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
       color: white;
       padding: 14px;
       border-radius: 8px;
@@ -35,8 +35,8 @@
     }
     .frequency-table {
       margin-top: 20px;
-      background: #f4f8fb;
-      border: 1px solid #eaf3f8;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
       border-radius: 8px;
       overflow: hidden;
     }
@@ -55,7 +55,7 @@
     }
     .frequency-table td {
       padding: 10px;
-      border-bottom: 1px solid #eef3f7;
+      border-bottom: 1px solid var(--border);
     }
     .frequency-table tr:hover {
       background: rgba(11, 120, 182, 0.05);
@@ -75,7 +75,7 @@
     .char-display {
       font-family: 'Courier New', monospace;
       font-weight: 600;
-      background: #f4f8fb;
+      background: var(--surface-2);
       padding: 4px 8px;
       border-radius: 4px;
       display: inline-block;
@@ -87,8 +87,8 @@
     }
     .tabs button {
       padding: 10px 16px;
-      border: 2px solid #eef3f7;
-      background: white;
+      border: 2px solid var(--border);
+      background: var(--surface);
       border-radius: 6px;
       cursor: pointer;
       font-weight: 600;
@@ -124,73 +124,11 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does the character count include spaces?","acceptedAnswer":{"@type":"Answer","text":"This tool shows both the total character count (including spaces) and the character count without spaces. Most platforms like Twitter count spaces as characters, so use the total count for platform compliance checks."}},{"@type":"Question","name":"How many characters is a standard SMS?","acceptedAnswer":{"@type":"Answer","text":"A standard SMS using GSM-7 encoding supports 160 characters. If you use Unicode characters (like emojis or non-English text), the limit drops to 70 characters per segment. Longer messages are split into multiple segments and billed accordingly by most operators."}},{"@type":"Question","name":"What is the character limit for meta descriptions?","acceptedAnswer":{"@type":"Answer","text":"Google typically displays meta descriptions up to 160 characters on desktop and around 120 characters on mobile. Descriptions longer than this are truncated with \"...\". Keep your meta descriptions between 120–155 characters for best results in search results."}}]}
   </script>
+  <script>(function(){try{var t=localStorage.getItem('theme')||((window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches)?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 </head>
 <body>
   <a class="skip-to-content" href="#main-content" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
-  <header class="site-header">
-    <div class="header-top">
-      <!-- <a class="brand" href="/">tools.ifscpincode.in</a> -->
-      <!-- <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-sidebar">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button> -->
-    </div>
-    
-    <div class="sidebar-overlay"></div>
-    <nav class="sidebar-menu" id="site-sidebar" role="navigation" aria-label="Primary navigation">
-      <!-- <button class="sidebar-close" aria-label="Close menu">×</button> -->
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">💰</span>
-          Finance
-        </div>
-        <a href="/emi-calculator">EMI Calculator</a>
-        <a href="/gst-calculator">GST Calculator</a>
-        <a href="/sip-calculator">SIP Calculator</a>
-        <a href="/percentage-calculator">Percentage Calculator</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">💪</span>
-          Health
-        </div>
-        <a href="/bmi-calculator">BMI Calculator</a>
-        <a href="/age-calculator">Age Calculator</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">📝</span>
-          Text Tools
-        </div>
-        <a href="/word-counter">Word Counter</a>
-        <a href="/character-counter">Character Counter</a>
-        <a href="/base64-encoder">Base64 Encoder</a>
-        <a href="/url-encoder">URL Encoder</a>
-        <a href="/html-beautifier">HTML Beautifier</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">🔧</span>
-          Developer Tools
-        </div>
-        <a href="/json-formatter">JSON Formatter</a>
-        <a href="/xml-formatter">XML Formatter</a>
-        <a href="/uuid-generator">UUID Generator</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">⏱️</span>
-          Utilities
-        </div>
-        <a href="/stopwatch-timer">Stopwatch & Timer</a>
-      </div>
-    </nav>
-  </header>
+  
   <main id="main-content" class="wrap content-card">
     <article class="tool-card">
       <h1>Character Counter</h1>
@@ -309,14 +247,11 @@
       </section>
     
       <section class="seo-content">
-        <h2>What is a Character Counter?</h2>
-        <p>A character counter instantly counts the total number of characters in any text — with or without spaces — and shows which characters appear most frequently. It is an essential tool for social media managers, developers, copywriters, and SEO professionals who work with platforms that have strict character limits.</p>
+        <h2>When every character counts</h2>
+        <p>Some fields are unforgiving about length — SMS messages, database columns, social bios, search snippets. A character counter takes the guesswork out, splitting the total into letters, digits, spaces and symbols so you know exactly what you're working with, spaces and all.</p>
+        <h2>What frequency analysis reveals</h2>
+        <p>The frequency breakdown is where this tool earns its place. Seeing which characters appear most often is genuinely useful for puzzles and cryptograms, for spotting that a "password" is mostly one repeated letter, or just for satisfying curiosity about a piece of text. It all runs locally, so even sensitive text never leaves your browser.</p>
 
-        <h2>Why Character Limits Matter</h2>
-        <p>Every major platform has character limits: Twitter/X allows 280 characters per tweet, SMS messages are limited to 160 characters per segment, meta descriptions should be 150–160 characters for optimal SEO display, Google Ads headlines are capped at 30 characters, and Instagram captions allow up to 2,200 characters. This tool keeps you within limits instantly.</p>
-
-        <h2>Character Frequency Analysis</h2>
-        <p>Beyond simple counting, this tool analyzes which characters appear most often in your text. This is useful for detecting patterns, analyzing text samples for data processing, checking for repeated characters in passwords, and understanding the composition of imported data or log files.</p>
 
         <section class="faq">
           <h2>Frequently Asked Questions</h2>
@@ -337,11 +272,8 @@
 
     </article>
   </main>
-  <footer class="site-footer">
-    <div class="wrap">
-      <small>Character Counter • tools.ifscpincode.in</small>
-    </div>
-  </footer>
+  
   <script src="/assets/script.js"></script>
+  <script src="/assets/components.js" defer></script>
 </body>
 </html>

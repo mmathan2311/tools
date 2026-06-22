@@ -28,73 +28,11 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between XML and JSON?","acceptedAnswer":{"@type":"Answer","text":"Both are data formats. XML uses tags like HTML and supports attributes, comments, and namespaces — making it suitable for complex data and document structures. JSON is lighter and simpler, making it preferred for most modern web APIs. XML is still dominant in enterprise systems, banking, healthcare (HL7), and legacy integrations."}},{"@type":"Question","name":"Is my XML data private when I use this tool?","acceptedAnswer":{"@type":"Answer","text":"Yes. The formatter runs entirely in your browser. No XML content is uploaded to any server. Your data is processed locally and stays private."}},{"@type":"Question","name":"What is XML minification used for?","acceptedAnswer":{"@type":"Answer","text":"Minifying XML removes all whitespace, indentation, and comments to reduce file size. This is useful when transmitting XML over networks or storing large volumes of XML data where every byte matters."}}]}
   </script>
+  <script>(function(){try{var t=localStorage.getItem('theme')||((window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches)?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 </head>
 <body>
   <a class="skip-to-content" href="#main-content" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
-  <header class="site-header">
-    <div class="header-top">
-      <!-- <a class="brand" href="/">tools.ifscpincode.in</a> -->
-      <!-- <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-sidebar">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button> -->
-    </div>
-    
-    <div class="sidebar-overlay"></div>
-    <nav class="sidebar-menu" id="site-sidebar" role="navigation" aria-label="Primary navigation">
-      <!-- <button class="sidebar-close" aria-label="Close menu">×</button> -->
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">💰</span>
-          Finance
-        </div>
-        <a href="/emi-calculator">EMI Calculator</a>
-        <a href="/gst-calculator">GST Calculator</a>
-        <a href="/sip-calculator">SIP Calculator</a>
-        <a href="/percentage-calculator">Percentage Calculator</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">💪</span>
-          Health
-        </div>
-        <a href="/bmi-calculator">BMI Calculator</a>
-        <a href="/age-calculator">Age Calculator</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">📝</span>
-          Text Tools
-        </div>
-        <a href="/word-counter">Word Counter</a>
-        <a href="/character-counter">Character Counter</a>
-        <a href="/base64-encoder">Base64 Encoder</a>
-        <a href="/url-encoder">URL Encoder</a>
-        <a href="/html-beautifier">HTML Beautifier</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">🔧</span>
-          Developer Tools
-        </div>
-        <a href="/json-formatter">JSON Formatter</a>
-        <a href="/xml-formatter">XML Formatter</a>
-        <a href="/uuid-generator">UUID Generator</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">⏱️</span>
-          Utilities
-        </div>
-        <a href="/stopwatch-timer">Stopwatch & Timer</a>
-      </div>
-    </nav>
-  </header>
+  
   <main id="main-content" class="wrap content-card">
     <article class="tool-card">
       <h1>XML Formatter</h1>
@@ -133,11 +71,11 @@
       </section>
     
       <section class="seo-content">
-        <h2>What is an XML Formatter?</h2>
-        <p>An XML (Extensible Markup Language) formatter takes raw or minified XML and converts it into a properly indented, human-readable format. It also validates the XML against proper syntax rules, helping developers and data analysts work with configuration files, RSS feeds, SOAP API responses, and data exports more efficiently.</p>
+        <h2>Making XML readable again</h2>
+        <p>XML has a habit of arriving as one unbroken line — exported from a system, pulled from an API, or minified for transport. Formatting it restores the indentation and nesting so the document's shape becomes obvious and you can find the element you're after without scrolling sideways forever.</p>
+        <h2>Validate before you ship</h2>
+        <p>A misplaced tag or an unclosed element can quietly break whatever consumes your XML. The built-in validation checks that the document is well-formed and points you at the problem if it isn't, so you catch the slip here rather than in a failing integration later. Need it compact again? Minify it in one click. Nothing is uploaded — it's all processed locally.</p>
 
-        <h2>Why Format and Validate XML?</h2>
-        <p>XML is widely used in enterprise software, APIs, configuration files (like Maven pom.xml, Android manifests), and data exchange formats. When XML comes from APIs or is machine-generated, it is often compact and hard to read. Formatting it reveals the tag hierarchy clearly. Validation catches errors like mismatched tags, missing closing elements, or invalid attribute syntax before they cause runtime bugs.</p>
 
         <section class="faq">
           <h2>Frequently Asked Questions</h2>
@@ -158,11 +96,8 @@
 
     </article>
   </main>
-  <footer class="site-footer">
-    <div class="wrap">
-      <small>XML Formatter • tools.ifscpincode.in</small>
-    </div>
-  </footer>
+  
   <script src="/assets/script.js"></script>
+  <script src="/assets/components.js" defer></script>
 </body>
 </html>

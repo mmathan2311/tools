@@ -18,7 +18,7 @@
       margin: 20px 0;
     }
     .stat-card {
-      background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
       color: white;
       padding: 16px;
       border-radius: 8px;
@@ -52,73 +52,11 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does this tool count words in Indian languages?","acceptedAnswer":{"@type":"Answer","text":"The word counter works with any Unicode text including Tamil, Hindi, Telugu, Kannada, Malayalam, and other Indian languages. Words are counted by whitespace-separated units, which works consistently across languages."}},{"@type":"Question","name":"What is the ideal word count for an SEO blog post?","acceptedAnswer":{"@type":"Answer","text":"For competitive keywords, aim for 1,500–2,500 words. For informational content, 1,000–1,500 words is sufficient. Longer content tends to rank better as it covers topics more comprehensively, but quality and relevance matter more than length alone."}},{"@type":"Question","name":"How many words is a 5-minute speech?","acceptedAnswer":{"@type":"Answer","text":"At an average speaking pace of 130–150 words per minute, a 5-minute speech is approximately 650–750 words. For a faster pace (180 wpm), it would be around 900 words. Use this tool to calibrate your speech to the right length."}}]}
   </script>
+  <script>(function(){try{var t=localStorage.getItem('theme')||((window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches)?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 </head>
 <body>
   <a class="skip-to-content" href="#main-content" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
-  <header class="site-header">
-    <div class="header-top">
-      <!-- <a class="brand" href="/">tools.ifscpincode.in</a> -->
-      <!-- <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-sidebar">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button> -->
-    </div>
-    
-    <div class="sidebar-overlay"></div>
-    <nav class="sidebar-menu" id="site-sidebar" role="navigation" aria-label="Primary navigation">
-      <!-- <button class="sidebar-close" aria-label="Close menu">×</button> -->
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">💰</span>
-          Finance
-        </div>
-        <a href="/emi-calculator">EMI Calculator</a>
-        <a href="/gst-calculator">GST Calculator</a>
-        <a href="/sip-calculator">SIP Calculator</a>
-        <a href="/percentage-calculator">Percentage Calculator</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">💪</span>
-          Health
-        </div>
-        <a href="/bmi-calculator">BMI Calculator</a>
-        <a href="/age-calculator">Age Calculator</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">📝</span>
-          Text Tools
-        </div>
-        <a href="/word-counter">Word Counter</a>
-        <a href="/character-counter">Character Counter</a>
-        <a href="/base64-encoder">Base64 Encoder</a>
-        <a href="/url-encoder">URL Encoder</a>
-        <a href="/html-beautifier">HTML Beautifier</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">🔧</span>
-          Developer Tools
-        </div>
-        <a href="/json-formatter">JSON Formatter</a>
-        <a href="/xml-formatter">XML Formatter</a>
-        <a href="/uuid-generator">UUID Generator</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">⏱️</span>
-          Utilities
-        </div>
-        <a href="/stopwatch-timer">Stopwatch & Timer</a>
-      </div>
-    </nav>
-  </header>
+  
   <main id="main-content" class="wrap content-card">
     <article class="tool-card">
       <h1>Word Counter</h1>
@@ -179,14 +117,11 @@
       </section>
     
       <section class="seo-content">
-        <h2>What is a Word Counter?</h2>
-        <p>A word counter is a free online tool that instantly counts the number of words, characters, sentences, paragraphs, and estimates reading time in any text you paste or type. It is an essential tool for writers, bloggers, students, journalists, SEO professionals, and anyone who needs to meet specific word count requirements.</p>
+        <h2>Why writers keep one eye on the count</h2>
+        <p>Word and character limits are everywhere — a 160-character SMS, a meta description that gets truncated past ~160 characters, an essay with a strict cap, a Tweet, a college application with no room to spare. Seeing the count update as you type means you can shape your writing to fit instead of discovering you've overshot at the very end.</p>
+        <h2>Counts that go beyond words</h2>
+        <p>Alongside the word and character totals you'll see sentences, paragraphs and an estimated reading time. That reading-time figure (based on a typical 200 words per minute) is especially useful for blog posts and scripts, where "how long will this take someone" matters as much as the raw length. Everything updates live and stays on your device.</p>
 
-        <h2>Why Word Count Matters</h2>
-        <p>Different writing contexts have specific word count requirements: blog posts typically need 1,000–2,000 words for good SEO, academic essays have strict word limits, Twitter allows 280 characters per tweet, LinkedIn articles perform best at 1,500–2,000 words, and résumés should ideally be under 700 words. This tool helps you hit the right length every time.</p>
-
-        <h2>Reading Time Estimation</h2>
-        <p>The average adult reading speed is 200–250 words per minute. Based on your word count, this tool estimates how long it will take an average reader to finish your content. This is useful for web content, presentations, speeches, and YouTube script writing where timing matters.</p>
 
         <section class="faq">
           <h2>Frequently Asked Questions</h2>
@@ -207,11 +142,8 @@
 
     </article>
   </main>
-  <footer class="site-footer">
-    <div class="wrap">
-      <small>Word Counter • tools.ifscpincode.in</small>
-    </div>
-  </footer>
+  
   <script src="/assets/script.js"></script>
+  <script src="/assets/components.js" defer></script>
 </body>
 </html>

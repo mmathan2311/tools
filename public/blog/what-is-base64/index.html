@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="https://ifscpincode.in/image/logo.png" type="image/png">
+  <title>Base64 Isn't Encryption — Here's What It Actually Does — Blog</title>
+  <meta name="description" content="Base64 shows up everywhere in web development, and it's widely misunderstood. A short, clear explanation of what it is, why it exists, and when to reach for it." />
+  <link rel="canonical" href="https://tools.ifscpincode.in/blog/what-is-base64/" />
+  <meta name="theme-color" content="#4f46e5" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Base64 Isn't Encryption — Here's What It Actually Does" />
+  <meta property="og:description" content="Base64 shows up everywhere in web development, and it's widely misunderstood. A short, clear explanation of what it is, why it exists, and when to reach for it." />
+  <meta property="og:url" content="https://tools.ifscpincode.in/blog/what-is-base64/" />
+  <meta property="og:site_name" content="tools.ifscpincode.in" />
+  <meta property="article:published_time" content="2026-04-16" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Base64 Isn't Encryption \u2014 Here's What It Actually Does", "description": "Base64 shows up everywhere in web development, and it's widely misunderstood. A short, clear explanation of what it is, why it exists, and when to reach for it.", "datePublished": "2026-04-16", "dateModified": "2026-04-16", "author": {"@type": "Organization", "name": "tools.ifscpincode.in"}, "publisher": {"@type": "Organization", "name": "tools.ifscpincode.in", "logo": {"@type": "ImageObject", "url": "https://ifscpincode.in/image/logo.png"}}, "mainEntityOfPage": "https://tools.ifscpincode.in/blog/what-is-base64/"}</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JKTB30LJVN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JKTB30LJVN', { 'anonymize_ip': true });
+  </script>
+  <script>(function(){try{var t=localStorage.getItem('theme')||((window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches)?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body>
+  <a class="skip-to-content" href="#main-content">Skip to main content</a>
+  <main id="main-content" class="wrap">
+    <article class="tool-card prose">
+      <nav class="breadcrumb"><a href="/">Home</a> › <a href="/blog/">Blog</a> › <span>Developer</span></nav>
+      <h1>Base64 Isn't Encryption — Here's What It Actually Does</h1>
+      <p class="post-meta">Developer · 16 April 2026 · 2 min read</p>
+      <p>Sooner or later every developer runs into a wall of text that looks like gibberish — something like <code>SGVsbG8gd29ybGQ=</code> — and learns the word "Base64." It's one of those building blocks that's everywhere and rarely explained properly. So let's fix that.</p>
+
+      <h2>The problem it solves</h2>
+      <p>Some systems were built to handle plain text and nothing else — older email protocols are the classic example. Hand them raw binary data, like an image or a file, and things break. Base64 is a translation layer: it takes <em>any</em> data and re-expresses it using only a safe set of 64 characters (A–Z, a–z, 0–9, plus two extras). The result is text that can travel through text-only channels untouched.</p>
+
+      <h2>What it is <em>not</em></h2>
+      <p>This is the part people get wrong, so it's worth being blunt: <strong>Base64 is not encryption.</strong> It scrambles nothing and hides nothing. Anyone can decode it back to the original in one step, with no key and no effort. If you ever see a password or secret "protected" by Base64, treat that as a security bug, not a safeguard. It's an encoding, like writing the same message in a different alphabet.</p>
+
+      <h2>Where you'll actually meet it</h2>
+      <ul>
+        <li><strong>Data URIs</strong> — small images embedded straight into CSS or HTML as <code>data:image/png;base64,...</code>, saving a network request.</li>
+        <li><strong>Email attachments</strong> — the original reason it exists.</li>
+        <li><strong>JSON Web Tokens</strong> — the segments of a JWT are Base64-encoded (which is exactly why you should never put secrets in them unencrypted).</li>
+        <li><strong>Basic auth headers</strong> — credentials encoded for transport, protected by HTTPS rather than by the encoding itself.</li>
+      </ul>
+
+      <h2>One small cost</h2>
+      <p>Base64 makes data roughly a third larger, because it's spending extra characters to stay text-safe. That's a fine trade for a tiny icon in your CSS; it's a poor one for a large file you could just upload normally. Reach for it when you need text-safe transport, not as a default.</p>
+
+      <p>Need to encode or decode something right now? Our <a href="/base64-encoder">Base64 Encoder &amp; Decoder</a> does both instantly, in your browser.</p>
+      <p><a class="btn" href="/base64-encoder">Open the Base64 tool →</a></p>
+      <hr style="border:none;border-top:1px solid var(--border);margin:32px 0">
+      <p class="small">Found this useful? Browse all our <a href="/">free online tools</a> or read more on the <a href="/blog/">blog</a>.</p>
+    </article>
+  </main>
+  <script src="/assets/components.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="https://ifscpincode.in/image/logo.png" type="image/png">
+  <title>Hash Generator — SHA-1, SHA-256, SHA-512 Online</title>
+  <meta name="description" content="Free hash generator. Create SHA-1, SHA-256, SHA-384 and SHA-512 hashes from any text instantly in your browser. Secure and private." />
+  <meta name="keywords" content="hash generator, sha256 generator, sha512, sha1, online hash tool, checksum generator" />
+  <link rel="canonical" href="https://tools.ifscpincode.in/hash-generator" />
+  <meta name="theme-color" content="#4f46e5" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Hash Generator — SHA-1, SHA-256, SHA-512 Online" />
+  <meta property="og:description" content="Free hash generator. Create SHA-1, SHA-256, SHA-384 and SHA-512 hashes from any text instantly in your browser. Secure and private." />
+  <meta property="og:url" content="https://tools.ifscpincode.in/hash-generator" />
+  <meta property="og:site_name" content="tools.ifscpincode.in" />
+  <meta property="og:image" content="/assets/social_preview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Hash Generator — SHA-1, SHA-256, SHA-512 Online" />
+  <meta name="twitter:description" content="Free hash generator. Create SHA-1, SHA-256, SHA-384 and SHA-512 hashes from any text instantly in your browser. Secure and private." />
+  <meta name="twitter:image" content="/assets/social_preview.png" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Hash Generator", "url": "https://tools.ifscpincode.in/hash-generator", "description": "Free hash generator. Create SHA-1, SHA-256, SHA-384 and SHA-512 hashes from any text instantly in your browser. Secure and private.", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is my text sent to a server?", "acceptedAnswer": {"@type": "Answer", "text": "No. Hashing happens entirely in your browser using the Web Crypto API."}}, {"@type": "Question", "name": "Why is MD5 not included?", "acceptedAnswer": {"@type": "Answer", "text": "MD5 is cryptographically broken. We provide modern SHA algorithms that the browser supports natively and securely."}}, {"@type": "Question", "name": "Can I hash passwords with this?", "acceptedAnswer": {"@type": "Answer", "text": "You can, but production password storage should use a slow, salted algorithm like bcrypt or Argon2 on the server."}}]}</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JKTB30LJVN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JKTB30LJVN', { 'anonymize_ip': true });
+  </script>
+  <script>(function(){try{var t=localStorage.getItem('theme')||((window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches)?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body>
+  <a class="skip-to-content" href="#main-content">Skip to main content</a>
+  <main id="main-content" class="wrap content-card">
+    <article class="tool-card">
+      <h1>Hash Generator</h1>
+      <p class="lede">Generate cryptographic SHA hashes from any text. Everything runs locally — your input never leaves the page.</p>
+      <div class="form-row">
+        <label>Input text</label>
+        <textarea id="hash-input" placeholder="Type or paste text to hash…"></textarea>
+      </div>
+      <div class="actions"><button id="hash-generate" class="btn">Generate Hashes</button></div>
+      <div id="hash-output" style="margin-top:14px"><p class="small">Enter text above to see its hashes.</p></div>
+      <div id="hash-status" class="status"></div>
+      <section class="seo-content">
+        <h2>What is a hash?</h2>
+        <p>A cryptographic hash converts any input into a fixed-length string of characters. The same input always produces the same hash, but it is practically impossible to reverse a hash back into the original text. Hashes are used to verify file integrity, store passwords securely and generate checksums. This tool uses the browser's native Web Crypto API for fast, standards-compliant results.</p>
+        <h2>SHA-256 vs SHA-512</h2>
+        <p>SHA-256 produces a 64-character (256-bit) hash and is the most widely used today. SHA-512 produces a longer 128-character hash with a larger security margin. SHA-1 is included for legacy compatibility but is no longer recommended for security-sensitive use.</p>
+<section class="faq"><h2>Frequently Asked Questions</h2><div class="faq-item"><h3>Is my text sent to a server?</h3><p>No. Hashing happens entirely in your browser using the Web Crypto API.</p></div><div class="faq-item"><h3>Why is MD5 not included?</h3><p>MD5 is cryptographically broken. We provide modern SHA algorithms that the browser supports natively and securely.</p></div><div class="faq-item"><h3>Can I hash passwords with this?</h3><p>You can, but production password storage should use a slow, salted algorithm like bcrypt or Argon2 on the server.</p></div></section>
+    </article>
+  </main>
+  <script src="/assets/tools-extra.js"></script>
+  <script src="/assets/components.js" defer></script>
+</body>
+</html>

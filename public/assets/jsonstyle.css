@@ -1,49 +1,24 @@
- :root{
-      --bg: #f6f8fa;
-      --panel: #ffffff;
-      --muted: #6b7280;
-      --primary: #2563eb;
-      --accent: #7c3aed;
+    /* JSON formatter — scoped local tokens (inherit site palette where possible) */
+    #app{
+      --panel: var(--surface);
+      --primary: var(--accent);
       --success: #16a34a;
-      --danger: #dc2626;
-      --shadow: 0 6px 20px rgba(16,24,40,0.08);
-      --radius: 12px;
-      --text: #0f172a;
-      --editor-bg: #f8fafc;
-      --toolbar-bg: rgba(255,255,255,0.85);
+      --danger: #e0464b;
+      --editor-bg: var(--surface-2);
+      --toolbar-bg: var(--surface);
     }
 
-    [data-theme="dark"]{
-      --bg: #0b1220;
-      --panel: #0f1724;
-      --muted: #9aa4b2;
-      --primary: #60a5fa;
-      --accent: #a78bfa;
-      --success: #4ade80;
-      --danger: #fb7185;
-      --shadow: 0 6px 20px rgba(2,6,23,0.8);
-      --text: #e6eef8;
-      --editor-bg: #071020;
-      --toolbar-bg: rgba(15,23,36,0.7);
-    }
-
-    html,body{
-      height:100%;
-      margin:0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: linear-gradient(180deg, var(--bg), color-mix(in srgb, var(--bg) 85%, transparent));
-      color:var(--text);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      transition: background .25s ease, color .25s ease;
-    }
+    /* hide the in-app theme toggle — the global header toggle handles it */
+    #btn-theme{ display:none !important; }
 
     .app{
-      min-height:100vh;
+      max-width:var(--maxw);
+      width:100%;
+      margin:0 auto;
       display:flex;
       flex-direction:column;
-      gap:20px;
-      padding:20px;
+      gap:18px;
+      padding:24px 20px;
       box-sizing:border-box;
     }
 

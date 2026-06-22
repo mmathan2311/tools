@@ -26,7 +26,7 @@
 
     // LocalStorage keys
     const LS_INPUT_KEY = 'json_formatter_input_v1';
-    const LS_THEME_KEY = 'json_formatter_theme_v1';
+    const LS_THEME_KEY = 'theme'; // shared with global header theme toggle
 
     // Theme handling
     function applyTheme(theme){

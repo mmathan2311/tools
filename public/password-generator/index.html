@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="https://ifscpincode.in/image/logo.png" type="image/png">
+  <title>Password Generator — Create Strong Random Passwords Online</title>
+  <meta name="description" content="Free password generator. Create strong, random, secure passwords with custom length and character sets. Runs in your browser — nothing is stored or sent." />
+  <meta name="keywords" content="password generator, random password, strong password generator, secure password, online password creator" />
+  <link rel="canonical" href="https://tools.ifscpincode.in/password-generator" />
+  <meta name="theme-color" content="#4f46e5" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Password Generator — Create Strong Random Passwords Online" />
+  <meta property="og:description" content="Free password generator. Create strong, random, secure passwords with custom length and character sets. Runs in your browser — nothing is stored or sent." />
+  <meta property="og:url" content="https://tools.ifscpincode.in/password-generator" />
+  <meta property="og:site_name" content="tools.ifscpincode.in" />
+  <meta property="og:image" content="/assets/social_preview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Password Generator — Create Strong Random Passwords Online" />
+  <meta name="twitter:description" content="Free password generator. Create strong, random, secure passwords with custom length and character sets. Runs in your browser — nothing is stored or sent." />
+  <meta name="twitter:image" content="/assets/social_preview.png" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Password Generator", "url": "https://tools.ifscpincode.in/password-generator", "description": "Free password generator. Create strong, random, secure passwords with custom length and character sets. Runs in your browser \u2014 nothing is stored or sent.", "applicationCategory": "SecurityApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Are the passwords stored anywhere?", "acceptedAnswer": {"@type": "Answer", "text": "No. Passwords are generated locally in your browser and are never sent to a server or saved. Refreshing the page clears everything."}}, {"@type": "Question", "name": "How long should my password be?", "acceptedAnswer": {"@type": "Answer", "text": "Use at least 12 characters; 16 or more is recommended for important accounts like email and banking."}}, {"@type": "Question", "name": "Can I create passwords without symbols?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Uncheck any character set you do not want. Some sites restrict symbols, so you can generate letters-and-numbers-only passwords too."}}]}</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JKTB30LJVN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JKTB30LJVN', { 'anonymize_ip': true });
+  </script>
+  <script>(function(){try{var t=localStorage.getItem('theme')||((window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches)?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body>
+  <a class="skip-to-content" href="#main-content">Skip to main content</a>
+  <main id="main-content" class="wrap content-card">
+    <article class="tool-card">
+      <h1>Password Generator</h1>
+      <p class="lede">Generate strong, truly random passwords using your browser's secure crypto engine. Nothing is sent anywhere.</p>
+      <div class="form-row">
+        <div class="copy-row">
+          <input id="pw-output" type="text" readonly style="font-family:ui-monospace,monospace;font-size:1.1rem">
+          <button id="pw-copy" class="btn">Copy</button>
+        </div>
+        <div style="height:8px;background:var(--bg-soft);border-radius:6px;margin-top:12px;overflow:hidden"><div id="pw-meter-bar" style="height:100%;width:0;transition:.3s"></div></div>
+        <div class="small" style="margin-top:6px">Strength: <span id="pw-meter-label">—</span></div>
+      </div>
+      <div class="form-row">
+        <label>Length: <span id="pw-length-val">16</span></label>
+        <input id="pw-length" type="range" min="4" max="64" value="16">
+      </div>
+      <div class="grid-2" style="margin-top:6px">
+        <label style="display:flex;gap:8px;align-items:center"><input type="checkbox" id="pw-lower" checked style="width:auto"> Lowercase (a–z)</label>
+        <label style="display:flex;gap:8px;align-items:center"><input type="checkbox" id="pw-upper" checked style="width:auto"> Uppercase (A–Z)</label>
+        <label style="display:flex;gap:8px;align-items:center"><input type="checkbox" id="pw-number" checked style="width:auto"> Numbers (0–9)</label>
+        <label style="display:flex;gap:8px;align-items:center"><input type="checkbox" id="pw-symbol" checked style="width:auto"> Symbols (!@#$…)</label>
+      </div>
+      <div class="actions"><button id="pw-generate" class="btn">Generate New Password</button></div>
+      <div id="pw-status" class="status"></div>
+      <section class="seo-content">
+        <h2>What makes a strong password?</h2>
+        <p>A strong password is long, random and uses a mix of uppercase letters, lowercase letters, numbers and symbols. Length matters most — a 16-character password is exponentially harder to crack than an 8-character one. This generator uses the browser's cryptographically secure <code>crypto.getRandomValues()</code> API, so every password is genuinely random.</p>
+        <h2>Is this password generator safe?</h2>
+        <p>Yes. Passwords are created entirely on your device. We never see, log or transmit anything you generate. For maximum safety, use a unique password for every account and store them in a reputable password manager.</p>
+<section class="faq"><h2>Frequently Asked Questions</h2><div class="faq-item"><h3>Are the passwords stored anywhere?</h3><p>No. Passwords are generated locally in your browser and are never sent to a server or saved. Refreshing the page clears everything.</p></div><div class="faq-item"><h3>How long should my password be?</h3><p>Use at least 12 characters; 16 or more is recommended for important accounts like email and banking.</p></div><div class="faq-item"><h3>Can I create passwords without symbols?</h3><p>Yes. Uncheck any character set you do not want. Some sites restrict symbols, so you can generate letters-and-numbers-only passwords too.</p></div></section>
+    </article>
+  </main>
+  <script src="/assets/tools-extra.js"></script>
+  <script src="/assets/components.js" defer></script>
+</body>
+</html>

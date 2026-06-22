@@ -28,73 +28,11 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between URL encoding and Base64 encoding?","acceptedAnswer":{"@type":"Answer","text":"URL encoding converts characters to percent-encoded format (%XX) for safe use in URLs. Base64 encoding converts binary data to a text string for transmission in text-based systems. They serve different purposes — URL encoding is for URLs and query parameters, while Base64 is for encoding binary data in text fields."}},{"@type":"Question","name":"Should I encode the entire URL or just the parameter values?","acceptedAnswer":{"@type":"Answer","text":"Only encode the parameter values, not the entire URL. Encoding the full URL would also encode the :// in https:// and the / between path segments, breaking the URL. Use this tool to encode specific values before adding them as query parameters."}},{"@type":"Question","name":"What characters do not need to be URL encoded?","acceptedAnswer":{"@type":"Answer","text":"Letters (A–Z, a–z), digits (0–9), and the characters hyphen (-), underscore (_), period (.), and tilde (~) are considered safe and do not need encoding in URLs. All other characters should be percent-encoded."}}]}
   </script>
+  <script>(function(){try{var t=localStorage.getItem('theme')||((window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches)?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 </head>
 <body>
   <a class="skip-to-content" href="#main-content" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
-  <header class="site-header">
-    <div class="header-top">
-      <!-- <a class="brand" href="/">tools.ifscpincode.in</a> -->
-      <!-- <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-sidebar">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button> -->
-    </div>
-    
-    <div class="sidebar-overlay"></div>
-    <nav class="sidebar-menu" id="site-sidebar" role="navigation" aria-label="Primary navigation">
-      <!-- <button class="sidebar-close" aria-label="Close menu">×</button> -->
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">💰</span>
-          Finance
-        </div>
-        <a href="/emi-calculator">EMI Calculator</a>
-        <a href="/gst-calculator">GST Calculator</a>
-        <a href="/sip-calculator">SIP Calculator</a>
-        <a href="/percentage-calculator">Percentage Calculator</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">💪</span>
-          Health
-        </div>
-        <a href="/bmi-calculator">BMI Calculator</a>
-        <a href="/age-calculator">Age Calculator</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">📝</span>
-          Text Tools
-        </div>
-        <a href="/word-counter">Word Counter</a>
-        <a href="/character-counter">Character Counter</a>
-        <a href="/base64-encoder">Base64 Encoder</a>
-        <a href="/url-encoder">URL Encoder</a>
-        <a href="/html-beautifier">HTML Beautifier</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">🔧</span>
-          Developer Tools
-        </div>
-        <a href="/json-formatter">JSON Formatter</a>
-        <a href="/xml-formatter">XML Formatter</a>
-        <a href="/uuid-generator">UUID Generator</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">⏱️</span>
-          Utilities
-        </div>
-        <a href="/stopwatch-timer">Stopwatch & Timer</a>
-      </div>
-    </nav>
-  </header>
+  
   <main id="main-content" class="wrap content-card">
     <article class="tool-card">
       <h1>URL Encoder/Decoder</h1>
@@ -131,14 +69,11 @@
       </section>
     
       <section class="seo-content">
-        <h2>What is URL Encoding?</h2>
-        <p>URL encoding (also known as percent-encoding) converts special characters in a URL into a format that can be safely transmitted over the internet. URLs can only be sent using the ASCII character set, so characters outside this set — like spaces, Hindi text, symbols, or emojis — must be encoded. For example, a space becomes %20, and @ becomes %40.</p>
+        <h2>Why URLs can't contain just anything</h2>
+        <p>A web address has a strict alphabet. Spaces, ampersands, question marks and most non-English characters have special meaning or simply aren't allowed, so they have to be "percent-encoded" — turned into codes like <code>%20</code> for a space. Skip that step and links break or query parameters get misread.</p>
+        <h2>Encode going out, decode coming in</h2>
+        <p>Encode when you're building a URL or query string from text that might contain special characters. Decode when you've got a percent-encoded link and want to read it back in plain language. This tool does both in one click, which is handy when you're debugging a redirect or an API call and the URL has become an unreadable mess.</p>
 
-        <h2>Why URL Encoding is Necessary</h2>
-        <p>URLs have reserved characters like ?, &, =, #, and / that have special meaning in the URL structure. If these appear in query parameter values, they must be encoded to avoid breaking the URL. Similarly, non-ASCII characters (like Indian language text) must be UTF-8 encoded and then percent-encoded to work in all browsers and servers.</p>
-
-        <h2>Common URL Encoding Use Cases</h2>
-        <p>Web developers and API testers use URL encoding when: building query strings for GET requests, encoding search terms in URLs, passing special characters in form data, constructing redirect URLs, working with OAuth tokens and API keys in request parameters, and debugging malformed URLs from server logs.</p>
 
         <section class="faq">
           <h2>Frequently Asked Questions</h2>
@@ -159,11 +94,8 @@
 
     </article>
   </main>
-  <footer class="site-footer">
-    <div class="wrap">
-      <small>URL Encoder/Decoder • tools.ifscpincode.in</small>
-    </div>
-  </footer>
+  
   <script src="/assets/script.js"></script>
+  <script src="/assets/components.js" defer></script>
 </body>
 </html>

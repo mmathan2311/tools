@@ -12,8 +12,8 @@
   <link rel="stylesheet" href="/assets/style.css">
   <style>
     .uuid-display {
-      background: #f4f8fb;
-      border: 1px solid #eaf3f8;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
       border-radius: 8px;
       padding: 12px;
       font-family: 'Courier New', monospace;
@@ -55,8 +55,8 @@
       flex: 1;
     }
     .uuid-list {
-      background: #f4f8fb;
-      border: 1px solid #eaf3f8;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
       border-radius: 8px;
       padding: 12px;
       max-height: 300px;
@@ -66,7 +66,7 @@
     }
     .uuid-item {
       padding: 8px;
-      background: white;
+      background: var(--surface);
       margin: 4px 0;
       border-radius: 4px;
       display: flex;
@@ -101,73 +101,11 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is a UUID truly unique?","acceptedAnswer":{"@type":"Answer","text":"In practice, yes. While UUID v4 is randomly generated and theoretically could collide, the probability is so vanishingly small that it is treated as unique for all practical purposes. The chance of a collision is lower than 1 in a trillion trillion."}},{"@type":"Question","name":"What is the difference between UUID v1 and UUID v4?","acceptedAnswer":{"@type":"Answer","text":"UUID v1 is generated from the current timestamp and the MAC address of the machine, making it traceable to a specific device and time. UUID v4 is purely random with no embedded information. For privacy and security reasons, v4 is preferred for most applications."}},{"@type":"Question","name":"Can I use UUID as a database primary key?","acceptedAnswer":{"@type":"Answer","text":"Yes. UUIDs are excellent primary keys for distributed databases where multiple servers insert records simultaneously. Unlike auto-increment integers, UUIDs avoid ID conflicts across shards. However, random UUID v4 can cause index fragmentation in B-tree indexes — consider UUID v7 (time-ordered) for better database performance."}}]}
   </script>
+  <script>(function(){try{var t=localStorage.getItem('theme')||((window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches)?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 </head>
 <body>
   <a class="skip-to-content" href="#main-content" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
-  <header class="site-header">
-    <div class="header-top">
-      <!-- <a class="brand" href="/">tools.ifscpincode.in</a> -->
-      <!-- <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-sidebar">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button> -->
-    </div>
-    
-    <div class="sidebar-overlay"></div>
-    <nav class="sidebar-menu" id="site-sidebar" role="navigation" aria-label="Primary navigation">
-      <!-- <button class="sidebar-close" aria-label="Close menu">×</button> -->
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">💰</span>
-          Finance
-        </div>
-        <a href="/emi-calculator">EMI Calculator</a>
-        <a href="/gst-calculator">GST Calculator</a>
-        <a href="/sip-calculator">SIP Calculator</a>
-        <a href="/percentage-calculator">Percentage Calculator</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">💪</span>
-          Health
-        </div>
-        <a href="/bmi-calculator">BMI Calculator</a>
-        <a href="/age-calculator">Age Calculator</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">📝</span>
-          Text Tools
-        </div>
-        <a href="/word-counter">Word Counter</a>
-        <a href="/character-counter">Character Counter</a>
-        <a href="/base64-encoder">Base64 Encoder</a>
-        <a href="/url-encoder">URL Encoder</a>
-        <a href="/html-beautifier">HTML Beautifier</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">🔧</span>
-          Developer Tools
-        </div>
-        <a href="/json-formatter">JSON Formatter</a>
-        <a href="/xml-formatter">XML Formatter</a>
-        <a href="/uuid-generator">UUID Generator</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">⏱️</span>
-          Utilities
-        </div>
-        <a href="/stopwatch-timer">Stopwatch & Timer</a>
-      </div>
-    </nav>
-  </header>
+  
   <main id="main-content" class="wrap content-card">
     <article class="tool-card">
       <h1>UUID Generator</h1>
@@ -209,14 +147,11 @@
       </section>
     
       <section class="seo-content">
-        <h2>What is a UUID?</h2>
-        <p>A UUID (Universally Unique Identifier) is a 128-bit identifier that is guaranteed to be unique across all systems and time — without any central coordination. UUIDs look like this: <code>550e8400-e29b-41d4-a716-446655440000</code>. They are used as primary keys in databases, identifiers in distributed systems, session tokens, file names, and anywhere you need a unique ID that does not require a central authority to assign.</p>
+        <h2>Why random IDs beat sequential ones</h2>
+        <p>Counting 1, 2, 3 for your records seems simpler, but it leaks information (anyone can guess the next ID) and falls apart the moment two systems try to create records at once. A UUID sidesteps both problems: it's a 128-bit value random enough that you can generate one anywhere, on any machine, and trust it won't collide with another.</p>
+        <h2>Where UUIDs earn their keep</h2>
+        <p>You'll reach for them as database primary keys, as identifiers in APIs and distributed systems, for naming files or tracking events, and anywhere you need a unique handle without asking a central server for the next number. Generate one at a time, or batch up to a hundred at once — all created in your browser.</p>
 
-        <h2>UUID v4 — Random UUIDs</h2>
-        <p>This generator creates UUID version 4 (v4), which are randomly generated. A v4 UUID contains 122 bits of randomness, meaning the probability of generating two identical UUIDs is astronomically small (approximately 1 in 5.3 × 10³⁶). UUID v4 is the most commonly used version for general-purpose unique identifiers in applications and databases.</p>
-
-        <h2>Common Uses of UUID</h2>
-        <p>Software developers use UUIDs for: primary keys in SQL and NoSQL databases (avoiding sequential ID guessing attacks), request/trace IDs in microservices and APIs, unique file names for user uploads, session identifiers, tracking events in analytics, and generating idempotency keys for payment APIs like Razorpay, Stripe, or PayU.</p>
 
         <section class="faq">
           <h2>Frequently Asked Questions</h2>
@@ -237,11 +172,8 @@
 
     </article>
   </main>
-  <footer class="site-footer">
-    <div class="wrap">
-      <small>UUID Generator • tools.ifscpincode.in</small>
-    </div>
-  </footer>
+  
   <script src="/assets/script.js"></script>
+  <script src="/assets/components.js" defer></script>
 </body>
 </html>

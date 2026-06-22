@@ -4,212 +4,98 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <link rel="icon" href="https://ifscpincode.in/image/logo.png" type="image/png">
-  <title>Free Online Calculators • tools.ifscpincode.in</title>
-  <meta name="description" content="Free, fast and accurate online calculators: EMI, GST, SIP, BMI, Age and more. No signup — mobile friendly and SEO optimized." />
-  <meta name="keywords" content="emi calculator, gst calculator, sip calculator, bmi calculator, age calculator, online calculators" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="canonical" href="https://tools.ifscpincode.in/" /> 
+  <title>Free Online Tools & Calculators — EMI, GST, SIP, JSON & More</title>
+  <meta name="description" content="23+ free online tools and calculators that run entirely in your browser — EMI, GST, SIP, BMI, JSON Formatter, Password Generator, QR Code and more. No signup, no data sent to servers." />
+  <meta name="keywords" content="free online tools, online calculators, emi calculator, gst calculator, sip calculator, json formatter, password generator, qr code generator, developer tools" />
+  <link rel="canonical" href="https://tools.ifscpincode.in/" />
+  <meta name="theme-color" content="#4f46e5" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/style.css">
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-JKTB30LJVN', { 'anonymize_ip': true });
-</script>
 
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Free Online Tools & Calculators — tools.ifscpincode.in" />
+  <meta property="og:description" content="23+ free, fast and privacy-friendly online tools and calculators. No signup required." />
+  <meta property="og:url" content="https://tools.ifscpincode.in/" />
+  <meta property="og:site_name" content="tools.ifscpincode.in" />
   <meta property="og:image" content="/assets/social_preview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Free Online Tools & Calculators" />
+  <meta name="twitter:description" content="23+ free, fast and privacy-friendly online tools and calculators." />
   <meta name="twitter:image" content="/assets/social_preview.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebSite","name":"Free Online Calculators & Tools","url":"https://tools.ifscpincode.in/","description":"Free, fast and accurate online calculators: EMI, GST, SIP, BMI, Age and more. Developer tools: JSON Formatter, XML Formatter, UUID Generator. No signup required."}
+  {"@context":"https://schema.org","@type":"WebSite","name":"tools.ifscpincode.in","url":"https://tools.ifscpincode.in/","description":"Free, fast and privacy-friendly online tools and calculators.","potentialAction":{"@type":"SearchAction","target":"https://tools.ifscpincode.in/?q={search_term_string}","query-input":"required name=search_term_string"}}
   </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JKTB30LJVN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JKTB30LJVN', { 'anonymize_ip': true });
+  </script>
+  <script>(function(){try{var t=localStorage.getItem('theme')||((window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches)?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 </head>
 <body>
-  <a class="skip-to-content" href="#main-content" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
-  <!-- <header class="site-header">
-    <div class="header-top">
-      <a class="brand" href="/">tools.ifscpincode.in</a>
-      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-sidebar">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+  <a class="skip-to-content" href="#tools">Skip to tools</a>
+
+  <main id="main-content">
+    <section class="hero">
+      <span class="eyebrow">100% Free · No Signup · Privacy-First</span>
+      <h1>All the <span class="grad">online tools</span> you need, in one place</h1>
+      <p class="lede">A growing collection of fast calculators and developer utilities that run entirely in your browser. Nothing is uploaded to a server — your data never leaves your device.</p>
+
+      <div class="tool-search">       
+        <input id="tool-search-input" type="text" placeholder="Search tools — try “EMI”, “JSON”, “password”…" aria-label="Search tools" autocomplete="off" />
+      </div>
+
+      <div class="hero-stats">
+        <div><b>23+</b> tools</div>
+        <div><b>5</b> categories</div>
+        <div><b>0</b> data collected</div>
+      </div>
+    </section>
+
+    <div class="wrap" id="tools">
+      <div id="tool-grid">
+        <!-- Tool cards rendered by components.js from the central registry -->
+        <noscript><p class="center muted">Please enable JavaScript to browse and use the tools.</p></noscript>
+      </div>
+      <p class="no-results" id="no-results" style="display:none">No tools match your search. Try a different keyword.</p>
+
+      <section class="seo-content" style="margin-top:48px">
+        <h2>Free online tools — no signup, no installs</h2>
+        <p>Every tool on <strong>tools.ifscpincode.in</strong> works directly inside your web browser. There is no account to create, nothing to download, and no data sent to any server. From everyday financial calculators like <a href="/emi-calculator">EMI</a>, <a href="/gst-calculator">GST</a> and <a href="/sip-calculator">SIP</a>, to developer utilities like the <a href="/json-formatter">JSON Formatter</a>, <a href="/base64-encoder">Base64 Encoder</a> and <a href="/uuid-generator">UUID Generator</a>, everything you need is one click away.</p>
+        <p>Our calculators are tuned for Indian users — supporting the rupee (₹), GST slabs and instruments like SIP and home loans — while our text and developer tools serve everyone, everywhere.</p>
+
+        <h2>Why use these tools?</h2>
+        <ul>
+          <li><strong>Private by design</strong> — all processing happens locally in your browser.</li>
+          <li><strong>Fast and lightweight</strong> — no heavy frameworks, instant results.</li>
+          <li><strong>Mobile friendly</strong> — works great on phones, tablets and desktops.</li>
+          <li><strong>Always free</strong> — no paywalls, no trials, no limits.</li>
+        </ul>
+
+        <section class="faq">
+          <h2>Frequently asked questions</h2>
+          <div class="faq-item">
+            <h3>Are these tools really free?</h3>
+            <p>Yes. Every tool is completely free to use with no signup and no usage limits.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Is my data safe?</h3>
+            <p>Absolutely. All calculations and conversions run locally in your browser. We do not upload or store the text, numbers or files you enter.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Do I need to install anything?</h3>
+            <p>No. The tools work in any modern browser. You can also add the site to your home screen for quick access.</p>
+          </div>
+        </section>
+      </section>
     </div>
-    
-    <div class="sidebar-overlay"></div>
-    <nav class="sidebar-menu" id="site-sidebar" role="navigation" aria-label="Primary navigation">
-      <button class="sidebar-close" aria-label="Close menu">×</button>
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">💰</span>
-          Finance
-        </div>
-        <a href="/emi-calculator">EMI Calculator</a>
-        <a href="/gst-calculator">GST Calculator</a>
-        <a href="/sip-calculator">SIP Calculator</a>
-        <a href="/percentage-calculator">Percentage Calculator</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">💪</span>
-          Health
-        </div>
-        <a href="/bmi-calculator">BMI Calculator</a>
-        <a href="/age-calculator">Age Calculator</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">📝</span>
-          Text Tools
-        </div>
-        <a href="/word-counter">Word Counter</a>
-        <a href="/character-counter">Character Counter</a>
-        <a href="/base64-encoder">Base64 Encoder</a>
-        <a href="/url-encoder">URL Encoder</a>
-        <a href="/html-beautifier">HTML Beautifier</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">🔧</span>
-          Developer Tools
-        </div>
-        <a href="/json-formatter">JSON Formatter</a>
-        <a href="/xml-formatter">XML Formatter</a>
-        <a href="/uuid-generator">UUID Generator</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">⏱️</span>
-          Utilities
-        </div>
-        <a href="/stopwatch-timer">Stopwatch & Timer</a>
-      </div>
-    </nav>
-  </header> -->
-
-  <main id="main-content" class="wrap">
-    <h1>Free Online Calculators — Fast &amp; Accurate</h1>
-    <p class="lede">Explore our suite of SEO-optimized, mobile-friendly tools for finance, health and daily utilities. No signup required — just open a tool and use it.</p>
-
-    <section class="cards">
-      <article class="card">
-        <h2>EMI Calculator</h2>
-        <p>Calculate monthly EMI, total interest and view an amortization table. Includes downloadable CSV and interactive chart.</p>
-        <a class="btn" href="/emi-calculator">Open EMI Calculator</a>
-      </article>
-
-      <article class="card">
-        <h2>GST Calculator</h2>
-        <p>Quick GST calculation with CGST/SGST or IGST split. Reverse-calc from total price supported.</p>
-        <a class="btn" href="/gst-calculator">Open GST Calculator</a>
-      </article>
-
-      <article class="card">
-        <h2>SIP Calculator</h2>
-        <p>Projected SIP returns, total invested amount and graphical growth over time.</p>
-        <a class="btn" href="/sip-calculator">Open SIP Calculator</a>
-      </article>
-
-      <article class="card">
-        <h2>BMI Calculator</h2>
-        <p>Body Mass Index (BMI) calculator with WHO-based category explanation.</p>
-        <a class="btn" href="/bmi-calculator">Open BMI Calculator</a>
-      </article>
-
-      <article class="card">
-        <h2>Age Calculator</h2>
-        <p>Compute exact years, months and days between two dates.</p>
-        <a class="btn" href="/age-calculator">Open Age Calculator</a>
-      </article>
-      <article class="card">
-        <h2>Percentage Calculator</h2>
-        <p>Calculate the percentage for the given input.</p>
-        <a class="btn" href="/percentage-calculator">Open Percentage Calculator</a>
-      </article>
-    </section>
-
-     <h2>More Useful Tools</h1></h2>
-    <p class="lede">Text processing, encoding, and time tracking tools to boost productivity.</p>
-
-    <section class="cards">
-      <article class="card">
-        <h2>HTML Beautifier</h2>
-        <p>Format and beautify HTML code with proper indentation. Minify HTML to reduce file size.</p>
-        <a class="btn" href="/html-beautifier">Open HTML Beautifier</a>
-      </article>
-
-      <article class="card">
-        <h2>Base64 Encoder/Decoder</h2>
-        <p>Encode text to Base64 and decode Base64 strings. Fast and secure base64 conversion.</p>
-        <a class="btn" href="/base64-encoder">Open Base64 Tool</a>
-      </article>
-
-      <article class="card">
-        <h2>Stopwatch & Timer</h2>
-        <p>Track elapsed time with stopwatch or set a countdown timer with hours, minutes, and seconds.</p>
-        <a class="btn" href="/stopwatch-timer">Open Stopwatch/Timer</a>
-      </article>
-
-      <article class="card">
-        <h2>URL Encoder/Decoder</h2>
-        <p>Encode URLs and special characters for web usage. Decode percent-encoded URLs instantly.</p>
-        <a class="btn" href="/url-encoder">Open URL Tool</a>
-      </article>
-
-      <article class="card">
-        <h2>Word Counter</h2>
-        <p>Count words, characters, sentences, paragraphs and get reading time estimates in real-time.</p>
-        <a class="btn" href="/word-counter">Open Word Counter</a>
-      </article>
-      </section>
-
-     <h2>Developer & Coding Tools</h1></h2>
-    <p class="lede">JSON formatting, XML formatting, unique identifiers, and text analysis for developers.</p>
-    <section class="cards">
-      <article class="card">
-        <h2>JSON Formatter</h2>
-        <p>JSON Formatter and JSON Validator help to auto format JSON and validate your JSON text. It also provides a tree view that helps to navigate your formatted JSON data.</p>
-        <a class="btn" href="/json-formatter">Open JSON Formatter</a>
-      </article>
-
-      <article class="card">
-        <h2>XML Formatter</h2>
-        <p>Format XML with proper indentation, validate syntax, and minify for smaller file sizes.</p>
-        <a class="btn" href="/xml-formatter">Open XML Formatter</a>
-      </article>
-
-      <article class="card">
-        <h2>UUID Generator</h2>
-        <p>Generate random UUID v4 identifiers for databases, APIs, and applications. Batch generate up to 100 UUIDs.</p>
-        <a class="btn" href="/uuid-generator">Open UUID Generator</a>
-      </article>
-
-      <article class="card">
-        <h2>Character Counter</h2>
-        <p>Count characters and analyze frequency. See which characters appear most often with real-time statistics.</p>
-        <a class="btn" href="/character-counter">Open Character Counter</a>
-      </article>
-      </section>
-
-
-    <section class="seo-footer">
-      <h2>Free Online Tools — No Signup Required</h2>
-      <p>All tools on this site are free to use and work directly in your browser. No login, no installation, and no data is sent to any server. From financial calculators like EMI and GST to developer utilities like JSON Formatter and UUID Generator, everything you need is just one click away.</p>
-      <p>These tools are designed for Indian users — supporting Indian currency (₹), GST slabs, and financial instruments like SIP and home loans — as well as global users who need reliable coding and text utilities.</p>
-    </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      <small>© tools.ifscpincode.in — Free Tools Hub •</small>
-    </div>
-  </footer>
-
-  <script>/* minimal inline for progressive enhancement */</script>
+  <script src="/assets/components.js" defer></script>
 </body>
 </html>

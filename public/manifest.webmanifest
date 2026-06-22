@@ -1,0 +1,16 @@
+{
+  "name": "tools.ifscpincode.in \u2014 Free Online Tools",
+  "short_name": "ToolKit",
+  "description": "Free, fast and privacy-friendly online tools and calculators.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f6f8fc",
+  "theme_color": "#4f46e5",
+  "icons": [
+    {
+      "src": "https://ifscpincode.in/image/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

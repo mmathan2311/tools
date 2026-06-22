@@ -8,6 +8,7 @@
   <meta name="description" content="Free EMI calculator: compute monthly EMI, total interest, and view amortization schedule. Download CSV and see interactive chart." />
   <meta name="keywords" content="emi calculator, loan emi calculator, amortization table, emi chart" />
   <link rel="canonical" href="https://tools.ifscpincode.in/emi-calculator" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/style.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script type="application/ld+json">
@@ -35,73 +36,11 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does prepaying a loan reduce my EMI?","acceptedAnswer":{"@type":"Answer","text":"Yes. When you make a part-prepayment, the outstanding principal reduces. You can either keep the same tenure and lower your EMI, or keep the same EMI and reduce your tenure — saving significant interest either way."}},{"@type":"Question","name":"What is the difference between flat rate and reducing balance EMI?","acceptedAnswer":{"@type":"Answer","text":"In a flat rate loan, interest is charged on the original principal throughout. In a reducing balance loan (most bank loans), interest is charged only on the outstanding balance, making the effective interest lower. Our calculator uses the reducing balance method."}},{"@type":"Question","name":"Is the EMI fixed for the entire loan tenure?","acceptedAnswer":{"@type":"Answer","text":"For fixed-rate loans, yes — the EMI stays the same every month. For floating-rate loans, the EMI can change when the RBI repo rate changes, which affects your bank's base rate."}},{"@type":"Question","name":"What is an amortization table?","acceptedAnswer":{"@type":"Answer","text":"An amortization table shows the break-up of each EMI payment — how much goes towards interest and how much reduces the principal. In the early months, most of the EMI goes to interest. Towards the end, most goes to principal repayment."}},{"@type":"Question","name":"Can I use this for a home loan EMI calculation?","acceptedAnswer":{"@type":"Answer","text":"Absolutely. Enter the home loan amount (e.g. ₹50,00,000), the interest rate (e.g. 8.5%), and the tenure (e.g. 20 years) to instantly see your monthly home loan EMI and total payment over the loan period."}}]}
   </script>
+  <script>(function(){try{var t=localStorage.getItem('theme')||((window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches)?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 </head>
 <body>
   <a class="skip-to-content" href="#main-content" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>  
-  <header class="site-header">
-    <div class="header-top">
-      <!-- <a class="brand" href="/">tools.ifscpincode.in</a> -->
-      <!-- <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-sidebar">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button> -->
-    </div>
     
-    <div class="sidebar-overlay"></div>
-    <nav class="sidebar-menu" id="site-sidebar" role="navigation" aria-label="Primary navigation">
-      <!-- <button class="sidebar-close" aria-label="Close menu">×</button> -->
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">💰</span>
-          Finance
-        </div>
-        <a href="/emi-calculator">EMI Calculator</a>
-        <a href="/gst-calculator">GST Calculator</a>
-        <a href="/sip-calculator">SIP Calculator</a>
-        <a href="/percentage-calculator">Percentage Calculator</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">💪</span>
-          Health
-        </div>
-        <a href="/bmi-calculator">BMI Calculator</a>
-        <a href="/age-calculator">Age Calculator</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">📝</span>
-          Text Tools
-        </div>
-        <a href="/word-counter">Word Counter</a>
-        <a href="/character-counter">Character Counter</a>
-        <a href="/base64-encoder">Base64 Encoder</a>
-        <a href="/url-encoder">URL Encoder</a>
-        <a href="/html-beautifier">HTML Beautifier</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">🔧</span>
-          Developer Tools
-        </div>
-        <a href="/json-formatter">JSON Formatter</a>
-        <a href="/xml-formatter">XML Formatter</a>
-        <a href="/uuid-generator">UUID Generator</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">⏱️</span>
-          Utilities
-        </div>
-        <a href="/stopwatch-timer">Stopwatch & Timer</a>
-      </div>
-    </nav>
-  </header>  
   <main id="main-content" class="wrap content-card">
     <article class="tool-card">
       <h1>EMI Calculator</h1>
@@ -139,17 +78,12 @@
 
     
       <section class="seo-content">
-        <h2>What is an EMI Calculator?</h2>
-        <p>An EMI (Equated Monthly Instalment) calculator helps you find out exactly how much you need to pay each month for a loan. Whether you are taking a home loan, car loan, personal loan, or education loan, this free tool instantly tells you your monthly payment, total interest payable, and gives you a complete amortization schedule.</p>
+        <h2>Read your EMI the way a lender does</h2>
+        <p>The monthly figure is the part everyone fixates on, but it's the least interesting number on the page. What actually decides whether a loan is a good deal is the <em>total interest</em> you'll hand over by the end — and that's hidden inside the schedule below the EMI. Two loans with nearly identical monthly payments can differ by lakhs once you add up every instalment.</p>
+        <p>One quirk worth knowing: in the early years almost all of your payment is interest, and barely any chips away at what you borrowed. That balance only flips toward the end. It's the reason prepaying in year two saves so much more than prepaying in year fifteen.</p>
+        <h2>Tenure is the lever you control</h2>
+        <p>The loan amount is fixed by what you're buying and the rate is mostly set by the market, which leaves tenure as your real dial. Stretch it and the EMI drops but the interest balloons; shorten it and you pay less overall but feel the squeeze each month. Try a few combinations here until the monthly figure fits your budget without quietly costing you a fortune. If you want the full breakdown of the maths, we've written it up in <a href="/blog/how-emi-is-calculated/">The EMI Formula, Demystified</a>.</p>
 
-        <h2>EMI Formula</h2>
-        <p>The EMI is calculated using the standard formula: <strong>EMI = P × r × (1+r)^n / ((1+r)^n – 1)</strong>, where P is the principal loan amount, r is the monthly interest rate (annual rate ÷ 12 ÷ 100), and n is the loan tenure in months. Our calculator applies this formula instantly so you get accurate results without doing any manual math.</p>
-
-        <h2>How to Use This EMI Calculator</h2>
-        <p>Simply enter your loan amount in rupees, the annual interest rate offered by your bank, and the loan tenure in years. Click "Calculate EMI" to see your monthly instalment, total interest amount, and the full repayment schedule broken down month by month. You can also download the amortization table as a CSV file for your records.</p>
-
-        <h2>Why Use an EMI Calculator Before Taking a Loan?</h2>
-        <p>Knowing your EMI in advance helps you plan your monthly budget effectively. You can compare different loan amounts and tenures to find a combination that suits your income. A longer tenure reduces your EMI but increases total interest paid, while a shorter tenure saves interest but increases monthly burden. Use this tool to find the right balance.</p>
 
         <section class="faq">
           <h2>Frequently Asked Questions</h2>
@@ -179,10 +113,9 @@
     </article>
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap"><small>EMI Calculator • tools.ifscpincode.in</small></div>
-  </footer>
+  
 
   <script src="/assets/script.js"></script>
+  <script src="/assets/components.js" defer></script>
 </body>
 </html>

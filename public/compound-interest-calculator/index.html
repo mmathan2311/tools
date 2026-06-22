@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="https://ifscpincode.in/image/logo.png" type="image/png">
+  <title>Compound Interest Calculator — Grow Your Savings Online</title>
+  <meta name="description" content="Free compound interest calculator. Calculate maturity value with monthly contributions, any compounding frequency, and a growth chart. Perfect for FDs and savings." />
+  <meta name="keywords" content="compound interest calculator, ci calculator, savings calculator, investment growth calculator, maturity value" />
+  <link rel="canonical" href="https://tools.ifscpincode.in/compound-interest-calculator" />
+  <meta name="theme-color" content="#4f46e5" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Compound Interest Calculator — Grow Your Savings Online" />
+  <meta property="og:description" content="Free compound interest calculator. Calculate maturity value with monthly contributions, any compounding frequency, and a growth chart. Perfect for FDs and savings." />
+  <meta property="og:url" content="https://tools.ifscpincode.in/compound-interest-calculator" />
+  <meta property="og:site_name" content="tools.ifscpincode.in" />
+  <meta property="og:image" content="/assets/social_preview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Compound Interest Calculator — Grow Your Savings Online" />
+  <meta name="twitter:description" content="Free compound interest calculator. Calculate maturity value with monthly contributions, any compounding frequency, and a growth chart. Perfect for FDs and savings." />
+  <meta name="twitter:image" content="/assets/social_preview.png" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Compound Interest Calculator", "url": "https://tools.ifscpincode.in/compound-interest-calculator", "description": "Free compound interest calculator. Calculate maturity value with monthly contributions, any compounding frequency, and a growth chart. Perfect for FDs and savings.", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the difference between simple and compound interest?", "acceptedAnswer": {"@type": "Answer", "text": "Simple interest is calculated only on the principal. Compound interest is calculated on the principal plus all previously earned interest, so it grows faster."}}, {"@type": "Question", "name": "Does compounding frequency matter?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. More frequent compounding (e.g. monthly vs yearly) produces a slightly higher maturity value for the same rate."}}, {"@type": "Question", "name": "Can I include monthly deposits?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Enter a monthly contribution to model a recurring deposit or SIP-style savings plan."}}]}</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JKTB30LJVN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JKTB30LJVN', { 'anonymize_ip': true });
+  </script>
+  <script>(function(){try{var t=localStorage.getItem('theme')||((window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches)?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body>
+  <a class="skip-to-content" href="#main-content">Skip to main content</a>
+  <main id="main-content" class="wrap content-card">
+    <article class="tool-card">
+      <h1>Compound Interest Calculator</h1>
+      <p class="lede">See how your money grows with the power of compounding, including optional monthly contributions.</p>
+      <div class="form-row two">
+        <div><label>Principal Amount (₹)</label><input id="ci-principal" type="number" value="100000"></div>
+        <div><label>Monthly Contribution (₹)</label><input id="ci-contrib" type="number" value="5000"></div>
+      </div>
+      <div class="form-row two">
+        <div><label>Annual Interest Rate (%)</label><input id="ci-rate" type="number" value="8" step="0.1"></div>
+        <div><label>Tenure (Years)</label><input id="ci-years" type="number" value="10"></div>
+      </div>
+      <div class="form-row">
+        <label>Compounding Frequency</label>
+        <select id="ci-freq"><option value="1">Yearly</option><option value="2">Half-Yearly</option><option value="4">Quarterly</option><option value="12" selected>Monthly</option></select>
+      </div>
+      <div class="actions"><button id="ci-calc" class="btn">Calculate</button></div>
+      <div id="ci-result" class="result" style="display:none"></div>
+      <div class="chart-wrap"><canvas id="ci-chart"></canvas></div>
+      <section class="seo-content">
+        <h2>How compound interest works</h2>
+        <p>Compound interest is interest earned on both your original principal and the interest already accumulated. The more frequently interest compounds — yearly, quarterly or monthly — the faster your money grows. Adding a regular monthly contribution accelerates growth dramatically over long periods, which is why starting early matters so much.</p>
+        <h2>Compound interest formula</h2>
+        <p>The base formula is <strong>A = P(1 + r/n)<sup>nt</sup></strong>, where P is principal, r is the annual rate, n is the number of times interest compounds per year, and t is the number of years. This calculator extends the formula to also add your recurring monthly contributions.</p>
+<section class="faq"><h2>Frequently Asked Questions</h2><div class="faq-item"><h3>What is the difference between simple and compound interest?</h3><p>Simple interest is calculated only on the principal. Compound interest is calculated on the principal plus all previously earned interest, so it grows faster.</p></div><div class="faq-item"><h3>Does compounding frequency matter?</h3><p>Yes. More frequent compounding (e.g. monthly vs yearly) produces a slightly higher maturity value for the same rate.</p></div><div class="faq-item"><h3>Can I include monthly deposits?</h3><p>Yes. Enter a monthly contribution to model a recurring deposit or SIP-style savings plan.</p></div></section>
+    </article>
+  </main>
+  <script src="/assets/tools-extra.js"></script>
+  <script src="/assets/components.js" defer></script>
+</body>
+</html>

@@ -6,6 +6,7 @@
   <link rel="icon" href="https://ifscpincode.in/image/logo.png" type="image/png">
   <title>SIP Calculator — Mutual Fund SIP Returns Projection</title>
   <meta name="description" content="SIP calculator to estimate future value of regular monthly investments. Shows growth chart and totals." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/style.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script type="application/ld+json">
@@ -39,74 +40,10 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is SIP risk-free?","acceptedAnswer":{"@type":"Answer","text":"No, SIP returns are market-linked and not guaranteed. Equity SIPs carry market risk, meaning the NAV can go up or down. However, long-term SIPs (10+ years) in diversified equity funds have historically delivered good inflation-beating returns."}},{"@type":"Question","name":"What is a good SIP return rate to use for calculations?","acceptedAnswer":{"@type":"Answer","text":"For equity mutual funds, 10–12% per annum is commonly used for conservative projections. For debt funds, 6–8% is more realistic. Always use a moderate assumption for long-term planning rather than relying on peak past returns."}},{"@type":"Question","name":"Can I stop or pause a SIP anytime?","acceptedAnswer":{"@type":"Answer","text":"Yes. Most mutual fund SIPs allow you to pause, reduce, or stop investments without penalty. You can also increase your SIP amount (step-up SIP) annually to match income growth."}},{"@type":"Question","name":"What is the minimum SIP amount in India?","acceptedAnswer":{"@type":"Answer","text":"Most mutual funds allow SIPs starting from ₹500 per month. Some funds even offer ₹100 SIPs. There is no upper limit on the SIP amount you can invest."}}]}
   </script>
+  <script>(function(){try{var t=localStorage.getItem('theme')||((window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches)?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 </head>
 <body>
   <a class="skip-to-content" href="#main-content" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
- <div class="header-top">
-  <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-sidebar">
-    <span></span><span></span><span></span>
-  </button>
-</div>
-
-
-  
-  <header class="site-header">
-    
-    
-    <div class="sidebar-overlay"></div>
-    <nav class="sidebar-menu" id="site-sidebar" role="navigation" aria-label="Primary navigation">
-      <!-- <button class="sidebar-close" aria-label="Close menu">×</button> -->
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">💰</span>
-          Finance
-        </div>
-        <a href="/emi-calculator">EMI Calculator</a>
-        <a href="/gst-calculator">GST Calculator</a>
-        <a href="/sip-calculator">SIP Calculator</a>
-        <a href="/percentage-calculator">Percentage Calculator</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">💪</span>
-          Health
-        </div>
-        <a href="/bmi-calculator">BMI Calculator</a>
-        <a href="/age-calculator">Age Calculator</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">📝</span>
-          Text Tools
-        </div>
-        <a href="/word-counter">Word Counter</a>
-        <a href="/character-counter">Character Counter</a>
-        <a href="/base64-encoder">Base64 Encoder</a>
-        <a href="/url-encoder">URL Encoder</a>
-        <a href="/html-beautifier">HTML Beautifier</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">🔧</span>
-          Developer Tools
-        </div>
-        <a href="/json-formatter">JSON Formatter</a>
-        <a href="/xml-formatter">XML Formatter</a>
-        <a href="/uuid-generator">UUID Generator</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">⏱️</span>
-          Utilities
-        </div>
-        <a href="/stopwatch-timer">Stopwatch & Timer</a>
-      </div>
-    </nav>
-  </header>
   <main id="main-content" class="wrap content-card">
     <article class="tool-card">
       <h1>SIP Calculator</h1>
@@ -124,14 +61,11 @@
       <section class="howto"><h2>About SIP calculations</h2><p>SIP returns assume a steady annualized return compounded monthly. Use conservative figures for planning purposes.</p></section>
     
       <section class="seo-content">
-        <h2>What is a SIP Calculator?</h2>
-        <p>A SIP (Systematic Investment Plan) calculator helps you estimate the returns on your mutual fund investments made at regular monthly intervals. Instead of investing a lump sum, a SIP allows you to invest a fixed amount every month, taking advantage of rupee cost averaging and the power of compounding over time.</p>
+        <h2>What a projection can — and can't — promise</h2>
+        <p>A SIP projection is a useful map, not a guarantee. It assumes a steady annual return compounded month after month, but real markets don't move in straight lines. Use a sober rate of return when you plan — somewhere in the low double digits for equity funds, lower for debt — rather than the headline figure from a bull run. The point isn't to predict the future precisely; it's to see roughly what disciplined monthly investing can build.</p>
+        <h2>Why starting early beats investing more</h2>
+        <p>The single biggest driver in the chart below isn't the amount — it's time. Money invested in your twenties has decades to compound on itself, and those early years do a startling amount of the heavy lifting. Someone who starts small and early often ends up ahead of someone who starts big and late. If you're weighing monthly investing against putting in a lump sum, our piece on <a href="/blog/sip-vs-lumpsum/">SIP vs lump sum</a> walks through the trade-offs.</p>
 
-        <h2>SIP Formula</h2>
-        <p>SIP returns are calculated using the future value of annuity formula: <strong>M = P × [(1 + r)^n – 1] / r × (1 + r)</strong>, where M is the maturity amount, P is the monthly SIP amount, r is the monthly rate of return (annual rate ÷ 12 ÷ 100), and n is the number of months. This calculator uses this formula to give you a projected corpus at the end of your investment horizon.</p>
-
-        <h2>How to Use This SIP Calculator</h2>
-        <p>Enter your monthly SIP amount, the expected annual return rate (typically 10–15% for equity mutual funds based on historical data), and the investment duration in years. The calculator instantly shows your total invested amount, expected returns, and final corpus value — helping you plan your financial goals like retirement, child's education, or buying a home.</p>
 
         <section class="faq">
           <h2>Frequently Asked Questions</h2>
@@ -156,7 +90,8 @@
 
     </article>
   </main>
-  <footer class="site-footer"><div class="wrap"><small>SIP Calculator • tools.ifscpincode.in</small></div></footer>
+  
  <script src="/assets/script.js"></script>
+  <script src="/assets/components.js" defer></script>
 </body>
 </html>

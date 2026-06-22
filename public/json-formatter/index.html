@@ -3,22 +3,23 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>JSON Formatter Tool</title>  
-  <meta name="description" content="Calculate percentage, percent increase/decrease, and what percent a number is of another." />
+  <title>JSON Formatter & Validator — Format JSON Online Free</title>  
+  <meta name="description" content="Free JSON Formatter and Validator. Beautify, validate and explore JSON with a collapsible tree view. Runs in your browser — your data stays private." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/style.css">
   <link rel="stylesheet" href="/assets/jsonstyle.css">  
 
   <link rel="canonical" href="https://tools.ifscpincode.in/json-formatter" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="JSON Formatter Tool" />
-  <meta property="og:description" content="Calculate percentage, percent increase/decrease, and what percent a number is of another." />
+  <meta property="og:title" content="JSON Formatter & Validator — Format JSON Online Free" />
+  <meta property="og:description" content="Free JSON Formatter and Validator. Beautify, validate and explore JSON with a collapsible tree view. Runs in your browser — your data stays private." />
   <meta property="og:url" content="https://tools.ifscpincode.in/json-formatter" />
   <meta property="og:site_name" content="tools.ifscpincode.in" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="JSON Formatter Tool" />
-  <meta name="twitter:description" content="Calculate percentage, percent increase/decrease, and what percent a number is of another." />
+  <meta name="twitter:title" content="JSON Formatter & Validator" />
+  <meta name="twitter:description" content="Free JSON Formatter and Validator. Beautify, validate and explore JSON with a collapsible tree view. Runs in your browser — your data stays private." />
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebPage","name":"JSON Formatter Tool","description":"Calculate percentage, percent increase/decrease, and what percent a number is of another.","url": "https://tools.ifscpincode.in/json-formatter"}
+  {"@context":"https://schema.org","@type":"WebPage","name":"JSON Formatter & Validator","description":"Free JSON Formatter and Validator. Beautify, validate and explore JSON with a collapsible tree view. Runs in your browser — your data stays private.","url": "https://tools.ifscpincode.in/json-formatter"}
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JKTB30LJVN"></script>
   <script>
@@ -35,73 +36,11 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is my JSON data safe to paste here?","acceptedAnswer":{"@type":"Answer","text":"Yes. This tool runs entirely in your browser using client-side JavaScript. No data is transmitted to any external server. Your JSON stays completely private on your device."}},{"@type":"Question","name":"What is the difference between JSON format and minify?","acceptedAnswer":{"@type":"Answer","text":"Formatting (also called \"beautifying\" or \"pretty printing\") adds indentation and line breaks to make JSON human-readable. Minifying removes all unnecessary whitespace to make the file smaller for network transmission. Use formatting for development/debugging, and minify for production."}},{"@type":"Question","name":"What are common JSON errors?","acceptedAnswer":{"@type":"Answer","text":"Common JSON syntax errors include: trailing commas after the last item in an object or array, single quotes instead of double quotes for strings, unquoted keys, missing colons between key-value pairs, and unclosed brackets or braces. Our validator highlights all these errors instantly."}}]}
   </script>
+  <script>(function(){try{var t=localStorage.getItem('theme')||((window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches)?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 </head>
 <body>
   <a class="skip-to-content" href="#main-content" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
-  <!-- <header class="site-header">
-    <div class="header-top">
-      <a class="brand" href="/">tools.ifscpincode.in</a>
-      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-sidebar">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button> 
-    </div>
-    
-    <div class="sidebar-overlay"></div>
-    <nav class="sidebar-menu" id="site-sidebar" role="navigation" aria-label="Primary navigation">
-    <button class="sidebar-close" aria-label="Close menu">×</button>
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">💰</span>
-          Finance
-        </div>
-        <a href="/emi-calculator">EMI Calculator</a>
-        <a href="/gst-calculator">GST Calculator</a>
-        <a href="/sip-calculator">SIP Calculator</a>
-        <a href="/percentage-calculator">Percentage Calculator</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">💪</span>
-          Health
-        </div>
-        <a href="/bmi-calculator">BMI Calculator</a>
-        <a href="/age-calculator">Age Calculator</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">📝</span>
-          Text Tools
-        </div>
-        <a href="/word-counter">Word Counter</a>
-        <a href="/character-counter">Character Counter</a>
-        <a href="/base64-encoder">Base64 Encoder</a>
-        <a href="/url-encoder">URL Encoder</a>
-        <a href="/html-beautifier">HTML Beautifier</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">🔧</span>
-          Developer Tools
-        </div>
-        <a href="/json-formatter">JSON Formatter</a>
-        <a href="/xml-formatter">XML Formatter</a>
-        <a href="/uuid-generator">UUID Generator</a>
-      </div>
-      
-      <div class="menu-category">
-        <div class="menu-category-title">
-          <span class="menu-category-icon">⏱️</span>
-          Utilities
-        </div>
-        <a href="/stopwatch-timer">Stopwatch & Timer</a>
-      </div>
-    </nav>
-  </header> -->
+  <!--  -->
   <div class="app" id="app">    
     <div class="toolbar" role="toolbar" aria-label="JSON formatter toolbar">
       <div class="left">
@@ -169,5 +108,6 @@
     <div id="toast-message"></div>
   </div>
   <script src="/assets/jsonscript.js"></script>
+  <script src="/assets/components.js" defer></script>
 </body>
 </html>
